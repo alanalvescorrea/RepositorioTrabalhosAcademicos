@@ -1,14 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.5.8.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: 
--- Versão do Servidor: 5.5.24-log
--- Versão do PHP: 5.3.13
+-- Tempo de Geração: 31/07/2013 às 18:17:55
+-- Versão do Servidor: 5.5.32
+-- Versão do PHP: 5.4.17
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET time_zone = "-03:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `acervo_bd`
+-- Banco de Dados: `acervo_db`
 --
 
 -- --------------------------------------------------------
@@ -222,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `pessoas` (
   `tel` varchar(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `login` varchar(20) NOT NULL,
-  `senha` text NOT NULL,
+  `senha` varchar(128) NOT NULL,
   `tipo_acesso` int(11) NOT NULL,
   `observacao` text,
   `data` date NOT NULL,
