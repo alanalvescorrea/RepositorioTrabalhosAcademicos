@@ -1,33 +1,21 @@
-<html>
+<?php
+session_start();
+include("template/".SITE_TEMA."/header.php");
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Acesso ao sistema</title>
 
-        <!-- JQUERY -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
-
-        <!-- TWITTER BOOTSTRAP CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-
-        <!-- TWITTER BOOTSTRAP JS -->
-        <script src="js/bootstrap.min.js"></script>
-    </head>
-
-    <body>
-        <?php
-        $conn = mysql_connect("localhost", "root", "") or die("Impossível conectar");
-
-        if ($conn) {
-            mysql_select_db("acervo_bd", $conn);
-        }
-
+/**
+ * verificar de onde vem os dados que estao sendo enviados para utilizar um campo verificador apenas, antes de ler todo o codigo de todos os campos
+ * 
+ * se for um cadastro simples, nao utilizar arquivos do tema e fazer rodar usando $().load() (jquery)
+ */
         $nome = $_POST["nome"];
         $tel = $_POST["tel"];
         $email = $_POST["email"];
         $login = $_POST["login"];
         $senha = $_POST["senha"];
+        if(!empty($senha)){
+            $senha = hash('sha512',$senha);
+        }
         $tipo_acesso = 1;
         $observacao = $_POST["observacao"];
 
@@ -47,12 +35,13 @@
         } else {
             echo '<div class="alert alert-error">';
             echo "Ops...Cadastro não foi incluído";
-            echo \mysql_error();
+            echo mysql_error();
             echo '</div>';
         }
         ?>
     <center><a href='index.php' title="incluir" class='incluir'>Acessar Sistema </a></center>
         
 
-    </body>
-</html>
+<?php
+include("template/".SITE_TEMA."/footer.php");
+?>

@@ -1,11 +1,9 @@
 <?php
+include("inc/config.php");
+include("inc/core.php");
 
-$conn = mysql_connect("localhost", "root", "") or die("Impossível conectar");
-
-//Caso a conexão seja estabelecida corretamente, seleciona o Banco de Dados a ser usado
-if ($conn) {
-    mysql_select_db("acervo_bd", $conn);
-}
+$db = new db();
+$db->conexao();
 
 
 @$q = strtolower($_GET["q"]);

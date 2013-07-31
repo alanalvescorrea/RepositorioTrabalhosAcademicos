@@ -1,23 +1,7 @@
 <?php
-include_once("verifica.php");
+session_start();
+include("template/".SITE_TEMA."/header.php");
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Acesso ao sistema</title>
-
-        <!-- JQUERY -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
-
-        <!-- TWITTER BOOTSTRAP CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-
-        <!-- TWITTER BOOTSTRAP JS -->
-        <script src="js/bootstrap.min.js"></script>
-    </head>
-    <body>
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span12">
@@ -75,5 +59,6 @@ include_once("verifica.php");
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+<?php
+include("template/".SITE_TEMA."/footer.php");
