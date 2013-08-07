@@ -17,11 +17,10 @@ if (isset($_POST['nome'])) {
 
 //consulta sql - inserção
     $query = mysql_query("INSERT INTO acervos_alunos (nome, email, observacao, timestamp) VALUES ('$nome', '$email', '$observacao', 'NOW()')") or die(mysql_error());
-    if ($query)
-        echo 'Dados inseridos!';
+
 
 //fecha a conexão com o banco
     mysql_close($conexao);
-} else
-    echo 'Formulário não preenchido corretamente';
-?>
+} else {
+    echo 'Formulário não foi corretamente preenchido';
+}

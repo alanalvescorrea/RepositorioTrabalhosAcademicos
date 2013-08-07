@@ -52,7 +52,7 @@
                                 <h3 class="text-center">
                                     Cadastro de Trabalho Acadêmico
                                 </h3>
-                                <form class="form-horizontal">
+                                <form class="form-horizontal" id='formPrincipal' name='formPrincipal'>
                                     <fieldset>
 
                                         <!-- Form Name -->
@@ -149,7 +149,7 @@
                                                                 <h3>Cadastro de aluno</h3>
                                                             </div>
                                                             <div>
-                                                                <form class="contact">
+                                                                <form class="contact" id="formAluno" name="formAluno">
                                                                     <fieldset>
                                                                         <div class="modal-body">
                                                                             <ul class="nav nav-list">
@@ -171,7 +171,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <!-- Fim model-->
+                                                        <!-- Fim model -->
                                                         </div>
                                                         </div>
 
