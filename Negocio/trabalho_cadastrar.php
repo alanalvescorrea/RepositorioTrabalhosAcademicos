@@ -119,7 +119,7 @@ include '../negocio/seguranca.php';
                             <div class="control-group">
                                 <label class="control-label"  for="area">Area</label>
                                 <div class="controls">
-                                    <?php include '../negocio/autocomplete_area.php'; ?>
+                                    <?php include '../tela/area_autocomplete.html'; ?>
                                 </div>
                             </div>
 
