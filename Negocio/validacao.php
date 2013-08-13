@@ -6,7 +6,7 @@ if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
     exit;
 }
 
-include ('../persistencia/conexao_classe.php');
+include ('../persistencia/classe_conexao.php');
 $novaConexao = new conexao();
 $novaConexao->conecta();
 

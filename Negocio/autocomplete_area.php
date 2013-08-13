@@ -97,7 +97,8 @@
     <body>
         <div class="ui-widget">
             <label for="tags"></label>
-            <input name="area" id="tags" required=""/>
+            <input type="text" id="tags" name="area" placeholder="" class="input-xlarge" required="">
+            <!--<input name="area" id="tags" required=""/>-->
         </div>
     </body>
 </html>

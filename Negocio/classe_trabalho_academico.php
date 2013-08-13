@@ -22,8 +22,8 @@ $local_pdf = $_POST['local_pdf'];
 $palavras_chave = $_POST['palavras_chave'];
 $area = $_POST['area'];
 
-include ('../persistencia/conexao_classe.php');
-include 'mensagens_form_classe.php';
+include ('../persistencia/classe_conexao.php');
+include 'classe_mensagens_formularios.php';
 $novaConexao = new conexao();
 $novaConexao->conecta();
 

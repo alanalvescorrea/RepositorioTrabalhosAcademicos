@@ -40,7 +40,7 @@ include '../negocio/seguranca.php';
                     <hr />  
 
                     <!-- INICIO FORM -->
-                    <form class="form-horizontal" action='trabalho_classe.php' method="POST">
+                    <form class="form-horizontal" action='classe_trabalho_academico.php' method="POST">
                         <fieldset>
                             <div id="legend">
                                 <legend class="">Cadastrar novo trabalho acadêmico</legend>
@@ -119,7 +119,7 @@ include '../negocio/seguranca.php';
                             <div class="control-group">
                                 <label class="control-label"  for="area">Area</label>
                                 <div class="controls">
-                                    <?php include '../tela/area_autocomplete.html'; ?>
+                                    <?php include '../negocio/autocomplete_area.php'; ?>
                                 </div>
                             </div>
 
@@ -139,6 +139,7 @@ include '../negocio/seguranca.php';
             </div>
 
         </div>
+
         <?php include '../tela/rodape.html'; ?>
     </body>
 </html>
