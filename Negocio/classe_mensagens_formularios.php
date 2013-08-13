@@ -1,14 +1,5 @@
 <?php
-
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of mensagens_form
- *
  * @author Alan
  */
 
@@ -29,8 +20,6 @@ class mensagens_form {
     }
 
 //************* função mensagem sucesso ***************
-
-
     function sucesso() {
         echo '<link href="../css/alert.css" rel="stylesheet" type="text/css" />';
         echo '<div class="alerts">';
@@ -41,5 +30,4 @@ class mensagens_form {
         echo '</div>';
     }
 }
-
 ?>
