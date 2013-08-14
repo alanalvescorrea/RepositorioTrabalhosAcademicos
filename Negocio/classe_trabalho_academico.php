@@ -1,4 +1,5 @@
 <?php
+
 if (!empty($_POST) AND
         (empty($_POST['titulo']) OR
         empty($_POST['resumo']) OR
