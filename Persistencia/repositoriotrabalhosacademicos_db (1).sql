@@ -152,7 +152,15 @@ CREATE TABLE IF NOT EXISTS `instituicao` (
   `email` varchar(150) DEFAULT NULL,
   `observacao` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `instituicao`
+--
+
+INSERT INTO `instituicao` (`id`, `nome`, `email`, `observacao`) VALUES
+(1, 'Faculdade Cenecista de Osório', 'facos@mail.com', 'fone:3663-0852'),
+(2, 'Instituto Federal - campo Osório', 'mail@mail.com', 'fone:3663-8800');
 
 -- --------------------------------------------------------
 
@@ -166,7 +174,15 @@ CREATE TABLE IF NOT EXISTS `orientador` (
   `email` varchar(150) DEFAULT NULL,
   `observacao` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `orientador`
+--
+
+INSERT INTO `orientador` (`id`, `nome`, `email`, `observacao`) VALUES
+(1, 'Andrio Pinto dos Santos', 'mail@mail.com', 'mestre em computação aplicada'),
+(2, 'Renata Zanella', 'renata@mail.com', 'reside em Porto Alegre');
 
 -- --------------------------------------------------------
 
@@ -186,15 +202,22 @@ CREATE TABLE IF NOT EXISTS `trabalho_academico` (
   `palavras_chave` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `area` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `aluno` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `instituicao` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `orientador` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Extraindo dados da tabela `trabalho_academico`
 --
 
-INSERT INTO `trabalho_academico` (`id`, `titulo`, `tipo`, `resumo`, `abstract`, `numero_paginas`, `data`, `local_pdf`, `palavras_chave`, `area`, `aluno`) VALUES
-(22, 'a', NULL, 'a', 'a', 1, '0000-00-00 00:00:00', 'http://www.freewebmasterhelp.com/tutorials/phpmysql/4', 'tecnologia digital', 'CIÃŠNCIA DA COMPUTAÃ‡ÃƒO', '');
+INSERT INTO `trabalho_academico` (`id`, `titulo`, `tipo`, `resumo`, `abstract`, `numero_paginas`, `data`, `local_pdf`, `palavras_chave`, `area`, `aluno`, `instituicao`, `orientador`) VALUES
+(22, 'a', NULL, 'a', 'a', 1, '0000-00-00 00:00:00', 'http://www.freewebmasterhelp.com/tutorials/phpmysql/4', 'tecnologia digital', 'CIÃŠNCIA DA COMPUTAÃ‡ÃƒO', '', '', ''),
+(23, 's', NULL, 's', 's', 56, '0000-00-00 00:00:00', 'http://www.freewebmasterhelp.com/tutorials/phpmysql/4', 'tecnologia digital', 'GEOCIÃŠNCIAS', '', '', ''),
+(24, 'o', NULL, 'o', 'o', 12, '0000-00-00 00:00:00', 'http://www.freewebmasterhelp.com/tutorials/phpmysql/4', 'tecnologia digital', 'PROBABILIDADE E ESTATÃSTICA', '', '', ''),
+(25, 'novo', NULL, 'wwww', 'wwww', 23, '0000-00-00 00:00:00', 'C:UsersPublicPicturesSample Picturesa.pdf', 'tecnologia digital', 'ARQUEOLOGIA', '', '', ''),
+(26, 'agora Ã© pra valer', NULL, 'resumo agora Ã© pra valer', 'abstract agora Ã© para valer', 89, '2013-04-04 11:04:23', 'http://informatica.besaba.com/conteudo/xdk%20intel.txt', 'tecnologia digital', 'AGRONOMIA', 'Ciclano', '', ''),
+(27, 'novo', NULL, 'a', 'a', 23, '0000-00-00 00:00:00', 'eeee', 'tecnologia digital', 'ASTRONOMIA', 'Fulano da Silva', 'Instituto Federal - campo Osï¿½rio', 'Renata Zanella');
 
 -- --------------------------------------------------------
 
