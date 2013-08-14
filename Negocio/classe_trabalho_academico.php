@@ -15,6 +15,7 @@ if (!empty($_POST) AND
 }
 
 $titulo = $_POST['titulo'];
+$tipo = $_POST['tipo'];
 $resumo = $_POST['resumo'];
 $abstract = $_POST['abstract'];
 $numero_paginas = $_POST['numero_paginas'];
@@ -31,8 +32,8 @@ include 'classe_mensagens_formularios.php';
 $novaConexao = new conexao();
 $novaConexao->conecta();
 
-$query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo` , `resumo` , `abstract` , `numero_paginas` , `data` , `local_pdf` , `palavras_chave` , `area`,`aluno`,`instituicao`,`orientador`)  
-VALUES ('$titulo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area','$aluno','$instituicao','$orientador')");
+$query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo`, `tipo` , `resumo` , `abstract` , `numero_paginas` , `data` , `local_pdf` , `palavras_chave` , `area`,`aluno`,`instituicao`,`orientador`)  
+VALUES ('$titulo', '$tipo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area','$aluno','$instituicao','$orientador')");
 
 if ($query) {
     $mensagemSucesso = new mensagens_form();
