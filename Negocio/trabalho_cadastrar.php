@@ -119,7 +119,28 @@ include '../negocio/seguranca.php';
                             <div class="control-group">
                                 <label class="control-label"  for="area">Area</label>
                                 <div class="controls">
-                                    <?php include '../tela/area_autocomplete.html'; ?>
+                                    <?php include 'area.php'; ?>
+                                </div>
+                            </div>
+                            <!-- aluno -->
+                            <div class="control-group">
+                                <label class="control-label"  for="aluno">Aluno</label>
+                                <div class="controls">
+                                    <?php include 'aluno.php'; ?>
+                                </div>
+                            </div>
+                            <!-- instituição -->
+                            <div class="control-group">
+                                <label class="control-label"  for="aluno">Instituicão</label>
+                                <div class="controls">
+                                    <?php include 'instituicao.php'; ?>
+                                </div>
+                            </div>
+                            <!-- orientador -->
+                            <div class="control-group">
+                                <label class="control-label"  for="aluno">Orientador</label>
+                                <div class="controls">
+                                    <?php include 'orientador.php'; ?>
                                 </div>
                             </div>
 

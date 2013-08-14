@@ -21,14 +21,17 @@ $data = $_POST['data'];
 $local_pdf = $_POST['local_pdf'];
 $palavras_chave = $_POST['palavras_chave'];
 $area = $_POST['area'];
+$aluno = $_POST['aluno'];
+$instituicao = $_POST['instituicao'];
+$orientador = $_POST['orientador'];
 
 include ('../persistencia/classe_conexao.php');
 include 'classe_mensagens_formularios.php';
 $novaConexao = new conexao();
 $novaConexao->conecta();
 
-$query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo` , `resumo` , `abstract` , `numero_paginas` , `data` , `local_pdf` , `palavras_chave` , `area`)  
-VALUES ('$titulo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area')");
+$query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo` , `resumo` , `abstract` , `numero_paginas` , `data` , `local_pdf` , `palavras_chave` , `area`,`aluno`,`instituicao`,`orientador`)  
+VALUES ('$titulo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area','$aluno','$instituicao','$orientador')");
 
 if ($query) {
     $mensagemSucesso = new mensagens_form();
