@@ -1,5 +1,6 @@
 RepositorioTrabalhosAcademicos
 ==============================
+- O branch oficial é o "padroes"
 
 - Sistema que armazena trabalhos acadêmicos:
     (cadastra titulo, tipo, resumo, abstract, data apresentação, local PDF, palavra chave e area aluno, orientador, instituição)
