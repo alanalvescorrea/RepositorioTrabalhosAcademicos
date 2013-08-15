@@ -14,7 +14,7 @@ class mensagens_form {
         echo '<div class="alerts">';
         echo '<div class="alert-message warning">
                 <a class="close" href="#">×</a>
-                <p><strong>Ops...</strong> O cadastro não foi gravado. TENTE NOVAMENTE <a href="trabalho_cadastrar.php"></a>.</p>
+                <p><strong>Ops...</strong> Dados não foram gravados. TENTE NOVAMENTE <a href="trabalho_cadastrar.php"></a>.</p>
             </div>';
         echo '</div>';
     }
@@ -25,7 +25,7 @@ class mensagens_form {
         echo '<div class="alerts">';
         echo '<div class="alert-message success">
                 <a class="close" href="#">×</a>
-                <p><strong>Legal..</strong> O trabalho foi gravado com sucesso <a href="trabalho_cadastrar.php">CADASTRAR OUTRO TRABALHO</a>.</p>
+                <p><strong>Legal..</strong> Dados gravados com sucesso <a href="trabalho_cadastrar.php">CADASTRAR OUTRO TRABALHO</a>.</p>
             </div>';
         echo '</div>';
     }

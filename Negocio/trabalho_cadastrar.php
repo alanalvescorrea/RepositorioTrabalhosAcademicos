@@ -19,7 +19,6 @@ include '../negocio/seguranca.php';
         <script src="../js/bootstrap.min.js"></script>
 
 
-
     </head>
     <body>
         <?php include '../tela/header.html'; ?>
@@ -43,7 +42,7 @@ include '../negocio/seguranca.php';
                     <form class="form-horizontal" action='classe_trabalho_academico.php' method="POST">
                         <fieldset>
                             <div id="legend">
-                                <legend class="">Cadastrar novo trabalho acadêmico</legend>
+                                <legend class="breadcrumb">Cadastrar novo trabalho acadêmico</legend>
                             </div>
 
                             <!-- titulo -->
@@ -127,6 +126,11 @@ include '../negocio/seguranca.php';
                                 <label class="control-label"  for="aluno">Aluno</label>
                                 <div class="controls">
                                     <?php include 'aluno.php'; ?>
+                                    <?php echo 'cadastrar'; ?> 
+                                    <?php echo '<a href="aluno_cadastrar.php" target="_blank"> novo aluno</a>'; ?>
+                                    <!--form cadastrar novon aluno
+                                    
+                                    -->
                                 </div>
                             </div>
                             <!-- instituição -->
@@ -134,6 +138,8 @@ include '../negocio/seguranca.php';
                                 <label class="control-label"  for="aluno">Instituicão</label>
                                 <div class="controls">
                                     <?php include 'instituicao.php'; ?>
+                                    <?php echo 'cadastrar'; ?> 
+                                    <?php echo '<a href="instituicao_cadastrar.php" target="_blank"> nova instituição</a>'; ?>
                                 </div>
                             </div>
                             <!-- orientador -->
@@ -141,6 +147,8 @@ include '../negocio/seguranca.php';
                                 <label class="control-label"  for="aluno">Orientador</label>
                                 <div class="controls">
                                     <?php include 'orientador.php'; ?>
+                                    <?php echo 'cadastrar'; ?> 
+                                    <?php echo '<a href="orientador_cadastrar.php" target="_blank"> novo orientador</a>'; ?>
                                 </div>
                             </div>
 
