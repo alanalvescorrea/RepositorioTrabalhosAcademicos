@@ -1,0 +1,23 @@
+Repositório de Trabalhos Acadêmicos
+https://github.com/alanalvescorrea/RepositorioTrabalhosAcademicos
+
+Copyright (C) 20013  Alan Alves Correa (alan.correa.sul@gmail.com)
+					 Av. Jorge Dariva, 1251, Centro - Osório/RS
+					 CEP: 95520-000
+                       
+
+Repositório de Trabalhos Acadêmicos é um sistema para inseração e consulta
+de trabalhos acadêmicos com caracter cintífico.
+
+	This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
