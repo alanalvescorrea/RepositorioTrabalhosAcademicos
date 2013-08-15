@@ -7,9 +7,9 @@ Copyright (C) 20013  Alan Alves Correa (alan.correa.sul@gmail.com)
                        
 
 Repositório de Trabalhos Acadêmicos é um sistema para inseração e consulta
-de trabalhos acadêmicos com caracter cintífico.
+de trabalhos acadêmicos com caracter científico.
 
-	This program is free software: you can redistribute it and/or modify
+    This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
