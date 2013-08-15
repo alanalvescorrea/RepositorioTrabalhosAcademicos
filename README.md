@@ -14,6 +14,6 @@ RepositorioTrabalhosAcademicos
     Persistencia (classes e logica com o banco de dados)
     sistema baseado em classes do bootstrap twitter
 
-- Este é um software livre com licença GPL
+- Este é um software livre com licença GPLv3
 
 
