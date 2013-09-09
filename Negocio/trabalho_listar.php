@@ -9,9 +9,13 @@ $novaConexao = new conexao();
 $novaConexao->conecta();
 $qry = mysql_query("select titulo,aluno,orientador from trabalho_academico");
 
+//Pegando quantidade de registros
+$sql = "SELECT * FROM trabalho_academico";
+$res = mysql_query($sql);
+$rows = mysql_num_rows($res);
+
 
 //Pegando os nomes dos campos
-
 $num_fields = mysql_num_fields($qry); //Obtém o número de campos do resultado
 
 for ($i = 0; $i < $num_fields; $i++) {//Pega o nome dos campos
@@ -64,7 +68,8 @@ $table .= '</tbody></table>';
 
                     <hr />  
                     <legend class="breadcrumb">Trabalhos acadêmicos cadastrados</legend>
-
+                    Quantidade de trabalhos cadastrados: 
+                    <?php echo("$rows"); ?>
                     <?php echo $table; ?>
 
                 </div>
