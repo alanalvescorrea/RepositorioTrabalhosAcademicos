@@ -7,7 +7,7 @@ include ('../persistencia/classe_conexao.php');
 include 'classe_mensagens_formularios.php';
 $novaConexao = new conexao();
 $novaConexao->conecta();
-$qry = mysql_query("select titulo,aluno,orientador from trabalho_academico");
+$qry = mysql_query("select titulo,aluno,orientador from trabalho_academico ORDER BY titulo");
 
 //Pegando quantidade de registros
 $sql = "SELECT * FROM trabalho_academico";
