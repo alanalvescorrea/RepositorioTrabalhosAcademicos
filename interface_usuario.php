@@ -10,7 +10,7 @@ $novaConexao->conecta();
 @$busca = $_POST['palavra']; // palavra que o usuario digitou
 
 $consulta = "SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'"; //faz a busca com as palavras enviadas
-$novaConexao->consulta($consulta);
+$novaConexao->mysql_query($consulta);
 
 if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
     echo "Nenhum registro encontrado.";
@@ -79,7 +79,7 @@ if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
             </div>
             <?php
             $rodaPe = new tela();
-            $rodaPe->rodape()
+            $rodaPe->rodape();
             ?>
 
     </body>

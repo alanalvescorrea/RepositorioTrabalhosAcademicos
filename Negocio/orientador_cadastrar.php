@@ -20,8 +20,9 @@ if (isset($_POST['nome'])) {
     $novaConexao = new conexao();
     $novaConexao->conecta();
 
-    $query = mysql_query("INSERT INTO `orientador` ( `nome`, `email` , `observacao`)  
-VALUES ('$nome', '$email', '$observacao')");
+    $inserir = "INSERT INTO `orientador` ( `nome`, `email` , `observacao`)  
+      VALUES ('$nome', '$email', '$observacao')";
+    $novaConexao->mysql_query($inserir);
     exit();
 }
 ?>

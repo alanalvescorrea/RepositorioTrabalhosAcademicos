@@ -15,13 +15,19 @@ class conexao {
         return $status;
     }
 
-    function consulta($query) {
+    function mysql_query($query) {
         $this->query = mysql_query($query);
         return $this->query;
     }
 
     function resultado() {
         return mysql_fetch_assoc($this->query);
+    }
+    
+    
+    function desconectar()
+    {
+        mysql_close($this->conexao);
     }
 
 }

@@ -21,8 +21,9 @@ if (isset($_POST['nome'])) {
     $novaConexao = new conexao();
     $novaConexao->conecta();
 
-    $query = mysql_query("INSERT INTO `autor` ( `nome`, `email` , `observacao`)  
-VALUES ('$nome', '$email', '$observacao')");
+    $inserir = "INSERT INTO `autor` ( `nome`, `email` , `observacao`)  
+      VALUES ('$nome', '$email', '$observacao')";
+    $novaConexao->mysql_query($inserir);
     exit();
 }
 ?>
@@ -38,8 +39,8 @@ VALUES ('$nome', '$email', '$observacao')");
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php 
-        $header=new tela();
+        <?php
+        $header = new tela();
         $header->header();
         ?>
 
@@ -48,8 +49,8 @@ VALUES ('$nome', '$email', '$observacao')");
             <!-- CLASSE PARA DEFINIR UMA LINHA -->
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php 
-                $menuEsquerdo=new tela();
+                <?php
+                $menuEsquerdo = new tela();
                 $menuEsquerdo->menu_esquerdo();
                 ?>
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
@@ -114,8 +115,8 @@ VALUES ('$nome', '$email', '$observacao')");
                     </script>
                 </div>
             </div>
-            <?php 
-            $rodape=new tela();
+            <?php
+            $rodape = new tela();
             $rodape->rodape();
             ?>
     </body>

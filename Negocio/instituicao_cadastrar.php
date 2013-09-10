@@ -17,8 +17,9 @@ if (isset($_POST['nome'])) {
     $novaConexao = new conexao();
     $novaConexao->conecta();
 
-    $query = mysql_query("INSERT INTO `instituicao` ( `nome`, `email` , `observacao`)  
-VALUES ('$nome', '$email', '$observacao')");
+    $inserir = "INSERT INTO `instituicao` ( `nome`, `email` , `observacao`)  
+      VALUES ('$nome', '$email', '$observacao')";
+    $novaConexao->mysql_query($inserir);
     exit();
 }
 ?>
@@ -34,7 +35,7 @@ VALUES ('$nome', '$email', '$observacao')");
     </head>
     <body>
         <?php
-        $headerNovo=new tela();
+        $headerNovo = new tela();
         $headerNovo->header();
         ?>
 
@@ -43,7 +44,7 @@ VALUES ('$nome', '$email', '$observacao')");
             <!-- CLASSE PARA DEFINIR UMA LINHA -->
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php 
+                <?php
                 $menuEsquerdoNovo = new tela();
                 $menuEsquerdoNovo->menu_esquerdo();
                 ?>
@@ -109,9 +110,12 @@ VALUES ('$nome', '$email', '$observacao')");
                     </script>
                 </div>
             </div>
-            <?php 
-            $novoRodape=new tela();
+            <?php
+            $novoRodape = new tela();
             $novoRodape->rodape();
             ?>
     </body>
 </html>
+ 
+  
+  
