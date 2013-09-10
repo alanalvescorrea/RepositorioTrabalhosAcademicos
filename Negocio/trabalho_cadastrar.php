@@ -1,5 +1,6 @@
 <?php
 include '../negocio/seguranca.php';
+include '../tela/tela.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
@@ -21,14 +22,20 @@ include '../negocio/seguranca.php';
 
     </head>
     <body>
-        <?php include '../tela/header.html'; ?>
+        <?php
+        $header = new tela();
+        $header->header();
+        ?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
         <div class="container-fluid">
             <!-- CLASSE PARA DEFINIR UMA LINHA -->
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php include '../tela/menu_esquerdo.html'; ?>
+                <?php
+                $menuEsquerdo = new tela();
+                $menuEsquerdo->menu_esquerdo();
+                ?>
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
@@ -169,7 +176,10 @@ include '../negocio/seguranca.php';
 
         </div>
 
-        <?php include '../tela/rodape.html'; ?>
+        <?php
+        $rodape = new tela();
+        $rodape->rodape();
+        ?>
     </body>
 </html>
 

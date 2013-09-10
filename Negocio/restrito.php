@@ -1,11 +1,15 @@
 <?php
 include '../negocio/seguranca.php';
+include '../tela/tela.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <?php include '../tela/titulo.html'; ?>
+        <?php
+        $titulo = new tela();
+        $titulo->titulo();
+        ?>
 
         <!-- JQUERY -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -19,14 +23,20 @@ include '../negocio/seguranca.php';
 
     </head>
     <body>
-        <?php include '../tela/header.html'; ?>
+        <?php
+        $header = new tela();
+        $header->header();
+        ?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
         <div class="container-fluid">
             <!-- CLASSE PARA DEFINIR UMA LINHA -->
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php include '../tela/menu_esquerdo.html'; ?>
+                <?php
+                $menuEsquerdo = new tela();
+                $menuEsquerdo->menu_esquerdo();
+                ?>
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
@@ -43,7 +53,7 @@ include '../negocio/seguranca.php';
                         </a>
                     </div>
                     <div class="span1">
-                        <a href="#" class="btn btn-primary">
+                        <a href="trabalho_listar.php" class="btn btn-primary">
                             <i class="icon-eye-open icon-white"></i>
                             <span><strong>Listar</strong></span>        	
                         </a>
@@ -65,7 +75,10 @@ include '../negocio/seguranca.php';
 
             </div>
         </div>
-        <?php include '../tela/rodape.html'; ?>
+        <?php
+        $rodape = new tela();
+        $rodape->rodape();
+        ?>
     </body>
 </html>
 

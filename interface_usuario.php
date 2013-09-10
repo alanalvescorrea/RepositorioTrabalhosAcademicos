@@ -1,24 +1,24 @@
 <?php
+include ('Persistencia/classe_conexao.php');
+include 'Negocio/classe_mensagens_formularios.php';
+include 'tela/tela.php';
+
 //Conexão e consulta ao Mysql
-include ('persistencia/classe_conexao.php');
-include 'negocio/classe_mensagens_formularios.php';
 $novaConexao = new conexao();
 $novaConexao->conecta();
 
-
-
 @$busca = $_POST['palavra']; // palavra que o usuario digitou
 
+$consulta = "SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'"; //faz a busca com as palavras enviadas
+$novaConexao->consulta($consulta);
 
-$busca_query = mysql_query("SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'") or die(mysql_error()); //faz a busca com as palavras enviadas
-
-if (empty($busca_query)) { //Se nao achar nada, lança essa mensagem
+if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
     echo "Nenhum registro encontrado.";
 }
 ?>
 
 <!DOCTYPE html> 
-<html lang="en"> 
+<html lang="pt-br"> 
     <head> 
         <meta charset="utf-8"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -26,7 +26,10 @@ if (empty($busca_query)) { //Se nao achar nada, lança essa mensagem
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php include 'tela/header.html'; ?>
+        <?php
+        $headerNovo = new tela();
+        $headerNovo->header();
+        ?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
         <div class="container-fluid">
@@ -37,9 +40,6 @@ if (empty($busca_query)) { //Se nao achar nada, lança essa mensagem
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
-
-
-
                     <hr />  
                     <legend class="breadcrumb">Seja Bem-Vindo ao Repositório de Acervo Acadêmico</legend>
                     <form action=" " method="post">
@@ -50,7 +50,6 @@ if (empty($busca_query)) { //Se nao achar nada, lança essa mensagem
                                 <button class="btn btn-success">Pesquisar</button>
                             </div>
                         </div>
-
                     </form>
 
 
@@ -60,15 +59,12 @@ if (empty($busca_query)) { //Se nao achar nada, lança essa mensagem
                         exit();
                     }
 
-
-                    while ($dados = mysql_fetch_array($busca_query)) {
-                        echo '<hr>';
-                        echo "<strong>$dados[titulo]</strong>.<br> ";
-
+                    while ($dados = $novaConexao->resultado()) {
                         @$string = $dados[resumo];
                         $string = substr($string, 0, 190);
-                        echo " <b><i>Resumo:</b></i> $string ...<br />";
-
+                        echo '<hr>';
+                        echo "<strong>$dados[titulo]</strong>.<br> ";
+                        echo " <i>Resumo:</i> $string ...<br />";
                         echo " <i>Autor:</i> $dados[aluno]<br>";
                         echo " <i>Orientador:</i> $dados[orientador]<br />";
                         echo " <i>Data:</i> $dados[data]<br />";
@@ -79,11 +75,12 @@ if (empty($busca_query)) { //Se nao achar nada, lança essa mensagem
                     }
                     ?>
 
-
-
-
                 </div>
             </div>
-            <?php include 'tela/rodape.html'; ?>
+            <?php
+            $rodaPe = new tela();
+            $rodaPe->rodape()
+            ?>
+
     </body>
 </html>

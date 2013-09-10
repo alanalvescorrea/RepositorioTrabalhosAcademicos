@@ -1,5 +1,6 @@
 <?php
 include '../negocio/seguranca.php';
+include '../tela/tela.php';
 ?>
 <?php
 if (isset($_POST['nome'])) {
@@ -37,14 +38,20 @@ VALUES ('$nome', '$email', '$observacao')");
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php include '../tela/header.html'; ?>
+        <?php 
+        $header=new tela();
+        $header->header();
+        ?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
         <div class="container-fluid">
             <!-- CLASSE PARA DEFINIR UMA LINHA -->
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php include '../tela/menu_esquerdo.html'; ?>
+                <?php 
+                $menuEsquerdo=new tela();
+                $menuEsquerdo->menu_esquerdo();
+                ?>
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
@@ -107,6 +114,9 @@ VALUES ('$nome', '$email', '$observacao')");
                     </script>
                 </div>
             </div>
-            <?php include '../tela/rodape.html'; ?>
+            <?php 
+            $rodape=new tela();
+            $rodape->rodape();
+            ?>
     </body>
 </html>

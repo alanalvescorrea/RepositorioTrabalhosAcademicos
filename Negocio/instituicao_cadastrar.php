@@ -1,5 +1,6 @@
 <?php
 include '../negocio/seguranca.php';
+include '../tela/tela.php';
 ?>
 <?php
 if (isset($_POST['nome'])) {
@@ -12,9 +13,6 @@ if (isset($_POST['nome'])) {
     echo "<span class=\"label label-info\" >Dados cadastrados com sucesso</span>";
     echo '<br><br><a href="#" onclick="window.close() " >Continuar cadastro</a>';
 
-
-
-
     include ('../persistencia/classe_conexao.php');
     $novaConexao = new conexao();
     $novaConexao->conecta();
@@ -26,7 +24,6 @@ VALUES ('$nome', '$email', '$observacao')");
 ?>
 
 
-
 <!DOCTYPE html> 
 <html lang="en"> 
     <head> 
@@ -36,14 +33,20 @@ VALUES ('$nome', '$email', '$observacao')");
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php include '../tela/header.html'; ?>
+        <?php
+        $headerNovo=new tela();
+        $headerNovo->header();
+        ?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
         <div class="container-fluid">
             <!-- CLASSE PARA DEFINIR UMA LINHA -->
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php include '../tela/menu_esquerdo.html'; ?>
+                <?php 
+                $menuEsquerdoNovo = new tela();
+                $menuEsquerdoNovo->menu_esquerdo();
+                ?>
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
@@ -106,6 +109,9 @@ VALUES ('$nome', '$email', '$observacao')");
                     </script>
                 </div>
             </div>
-            <?php include '../tela/rodape.html'; ?>
+            <?php 
+            $novoRodape=new tela();
+            $novoRodape->rodape();
+            ?>
     </body>
 </html>

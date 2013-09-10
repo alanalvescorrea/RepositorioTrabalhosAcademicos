@@ -8,7 +8,6 @@ class conexao {
     var $banco = 'repositoriotrabalhosacademicos_db';
     var $conexao = null;
     var $query = null;
-   
 
     function conecta() {
         $this->conexao = mysql_connect($this->host, $this->usuario, $this->senha);
@@ -16,6 +15,14 @@ class conexao {
         return $status;
     }
 
+    function consulta($query) {
+        $this->query = mysql_query($query);
+        return $this->query;
+    }
+
+    function resultado() {
+        return mysql_fetch_assoc($this->query);
+    }
 
 }
 
