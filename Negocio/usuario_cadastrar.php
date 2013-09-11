@@ -1,5 +1,5 @@
 <?php
-include 'tela/tela.php';
+include '../tela/tela.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
@@ -12,10 +12,10 @@ include 'tela/tela.php';
         <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
 
         <!-- TWITTER BOOTSTRAP CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
 
         <!-- TWITTER BOOTSTRAP JS -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
 
     </head>
     <body>
@@ -35,16 +35,24 @@ include 'tela/tela.php';
                     <div class="well">
 
                         <hr />
-                        <form class="form-horizontal" action='Negocio/validacao.php' method="POST">
+                        <form class="form-horizontal" action='../Negocio/validacao.php' method="POST">
                             <fieldset>
                                 <div id="legend">
-                                    <legend class="">Acesso ao sistema</legend>
+                                    <legend class="">Cadastro de novos usuários</legend>
+                                </div>
+                                
+                                <div class="control-group">
+                                    <!-- usuario -->
+                                    <label class="control-label"  for="username">Nome completo</label>
+                                    <div class="controls">
+                                        <input type="text" id="nome" name="nome" placeholder="" class="input-xlarge" required="">
+                                    </div>
                                 </div>
                                 <div class="control-group">
                                     <!-- usuario -->
                                     <label class="control-label"  for="username">Nome de usuário</label>
                                     <div class="controls">
-                                        <input type="text" id="txtUsuario" name="usuario" placeholder="" class="input-xlarge">
+                                        <input type="text" id="txtUsuario" name="usuario" placeholder="" class="input-xlarge" required="">
                                     </div>
                                 </div>
 
@@ -52,7 +60,21 @@ include 'tela/tela.php';
                                     <!-- senha-->
                                     <label class="control-label" for="password">Senha</label>
                                     <div class="controls">
-                                        <input type="password" id="senhatxtSenha" name="senha" placeholder="" class="input-xlarge">
+                                        <input type="password" id="senha" name="senha" placeholder="" class="input-xlarge" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <!-- usuario -->
+                                    <label class="control-label"  for="username">Email</label>
+                                    <div class="controls">
+                                        <input type="text" id="email" name="email" placeholder="" class="input-xlarge" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <!-- usuario -->
+                                    <label class="control-label"  for="username">Nível usuário</label>
+                                    <div class="controls">
+                                        <input type="text" id="nivel" name="nivel" placeholder="" class="input-xlarge" required="">
                                     </div>
                                 </div>
 
@@ -60,7 +82,7 @@ include 'tela/tela.php';
                                 <div class="control-group">
                                     <!-- botão de acesso -->
                                     <div class="controls">
-                                        <button class="btn btn-success">Acessar</button>
+                                        <button class="btn btn-success">Gravar Usuário</button>
                                         
                                     </div>
                                 </div>

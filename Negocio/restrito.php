@@ -59,18 +59,19 @@ include '../tela/tela.php';
                         </a>
                     </div>
                     <div class="span1">
-                        <a href="#" class="btn btn-primary">
+                        <a href="listar_trabalho.php" class="btn btn-primary">
                             <i class="icon-edit icon-white"></i>
                             <span><strong>Editar</strong></span>       
                         </a> 	
                     </div>
+                    <!--
                     <div class="span1">
                         <a href="#" class="btn btn-primary">
                             <i class="icon-trash icon-white"></i>
                             <span><strong>Excluir</strong></span>        	
                         </a>
                     </div>
-
+                    -->
                 </div>
 
             </div>

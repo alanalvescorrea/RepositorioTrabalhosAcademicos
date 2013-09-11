@@ -13,22 +13,16 @@ if (isset($_POST['nome'])) {
     echo "<span class=\"label label-info\" >Dados cadastrados com sucesso</span>";
     echo '<br><br><a href="#" onclick="window.close() " >Continuar cadastro</a>';
 
-
-
-
     include ('../persistencia/classe_conexao.php');
     include 'classe_mensagens_formularios.php';
     $novaConexao = new conexao();
     $novaConexao->conecta();
 
-    $inserir = "INSERT INTO `autor` ( `nome`, `email` , `observacao`)  
-      VALUES ('$nome', '$email', '$observacao')";
+    $inserir = "INSERT INTO `autor` ( `nome`, `email` , `observacao`) VALUES ('$nome', '$email', '$observacao')";
     $novaConexao->mysql_query($inserir);
     exit();
 }
 ?>
-
-
 
 <!DOCTYPE html> 
 <html lang="en"> 
@@ -57,7 +51,6 @@ if (isset($_POST['nome'])) {
                 <br><br><br>
                 <div class="span10">
                     <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '!'; ?> 
-
                     <?php echo "<a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
 
                     <hr />  
@@ -116,7 +109,7 @@ if (isset($_POST['nome'])) {
                 </div>
             </div>
             <?php
-            $rodape = new tela();
+            
             $rodape->rodape();
             ?>
     </body>

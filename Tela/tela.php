@@ -6,6 +6,7 @@ class tela {
     /* RODAPE************************************************** */
     function rodape() {
         echo "CopyLeft 2013";
+        
     }
 
     /* HEADER************************************************** */
@@ -36,6 +37,13 @@ class tela {
         <div class="span2">
              <h2> Menu </h2>
                 <ul class="nav nav-tabs nav-stacked">
+                
+                    <li>
+                        <a href="restrito.php">
+                            <i class="icon-home"></i>
+                                Menu Principal
+                        </a>
+                    </li>
                     <li>
                         <a href="trabalho_cadastrar.php">
                             <i class="icon-book"></i>
@@ -56,20 +64,20 @@ class tela {
                     </li>
                     <li>
                         <a href="instituicao_cadastrar.php">
-                            <i class="icon-home"></i>
+                            <i class="icon-globe"></i>
                                 Cadastrar nova instituição
                         </a>
                     </li>
                     <li>
                         <a href="trabalho_listar.php">
-                            <i class="icon-star"></i>
+                            <i class="icon-list-alt"></i>
                                 Listar trabalhos cadastrados
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="icon-star"></i>
-                                Lorem ipsum
+                        <a href="listar_trabalho.php">
+                            <i class="icon-edit"></i>
+                                Editar
                         </a>
                     </li>
             </ul>
