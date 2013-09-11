@@ -49,9 +49,9 @@ include '../tela/tela.php';
                         ?>
                         <form method="post" action="editar_exibir_edicao.php" >
                             <input type="hidden" name="id" value="<?php echo $linha['id']; ?>" /> <!– passando o valor da id em um campo oculto –>
-                            Titulo: <input type="text" name="titulo" value="<?php echo $linha['titulo']; ?>" /> <br /><!– mostrando dentro do form o valor do campo nome –>
-                            Aluno: <input type="text" name="aluno" value="<?php echo $linha['aluno']; ?>" /> <br /><!– mostrando dentro do form o valor do campo email –>
-
+                            Titulo: <input type="text" name="titulo" value="<?php echo $linha['titulo']; ?>" class="input-xxlarge"/> <br /><!– mostrando dentro do form o valor do campo nome –>
+                            Aluno:  <input type="text" name="aluno" value="<?php echo $linha['aluno']; ?>" /> <br /><!– mostrando dentro do form o valor do campo email –>
+                            
                             <div class="control-group">
                                 <!-- botão de acesso -->
                                 <div class="controls">
