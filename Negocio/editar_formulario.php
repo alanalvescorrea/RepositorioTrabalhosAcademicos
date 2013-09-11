@@ -52,6 +52,7 @@ include '../tela/tela.php';
                             Titulo: <input type="text" name="titulo" value="<?php echo $linha['titulo']; ?>" class="input-xxlarge"/> <br /><!– mostrando dentro do form o valor do campo nome –>
                             Aluno:  <input type="text" name="aluno" value="<?php echo $linha['aluno']; ?>" /> <br /><!– mostrando dentro do form o valor do campo email –>
                             Tipo:  <input type="text" name="tipo" value="<?php echo $linha['tipo']; ?>" /> <br /><!– mostrando dentro do form o valor do campo email –>
+                            Area:  <input type="text" name="area" value="<?php echo $linha['area']; ?>" /> <br /><!– mostrando dentro do form o valor do campo email –>
 
                             <div class="control-group">
                                 <!-- botão de acesso -->

@@ -43,13 +43,15 @@ include '../tela/tela.php';
                     $titulo = $_POST['titulo']; // Recebendo o valor nome do formulário
                     $aluno = $_POST['aluno']; // Recebendo o valor email do formulário
                     $tipo = $_POST['tipo']; // Recebendo o valor email do formulário
+                    $area = $_POST['area']; // Recebendo o valor email do formulário
+
                     
 
                     include ('../persistencia/classe_conexao.php');
                     $novaConexao = new conexao();
                     $novaConexao->conecta();
 
-                    mysql_query("UPDATE trabalho_academico SET titulo='" . $titulo . "', tipo='" . $tipo . "',aluno = '" . $aluno . "'WHERE id='" . $id . "'");
+                    mysql_query("UPDATE trabalho_academico SET titulo='" . $titulo . "', area='" . $area . "',tipo='" . $tipo . "',aluno = '" . $aluno . "'WHERE id='" . $id . "'");
                     ?>
 
                 </div>
