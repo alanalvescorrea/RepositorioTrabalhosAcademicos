@@ -1,15 +1,14 @@
 <?php
 
 class tela {
-    
-    
     /* RODAPE************************************************** */
+
     function rodape() {
         echo "CopyLeft 2013";
-        
     }
 
     /* HEADER************************************************** */
+
     function header() {
 
         echo '<div class="row-fluid">
@@ -26,13 +25,18 @@ class tela {
     }
 
     /* TITULO************************************************** */
+
     function titulo() {
 
         echo '<title>RTA</title>';
     }
 
     /* MENU ESQUERDO************************************************** */
+
     function menu_esquerdo() {
+
+
+
         echo'
         <div class="span2">
              <h2> Menu </h2>
@@ -80,10 +84,12 @@ class tela {
                                 Editar
                         </a>
                     </li>
+                    
             </ul>
         </div>
 ';
     }
+
 }
 
 ?>

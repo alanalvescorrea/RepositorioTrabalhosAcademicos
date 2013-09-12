@@ -1,6 +1,40 @@
 <?php
-include '../tela/tela.php';
+if (isset($_POST['nome'])) {
+    @$nome = strip_tags($_POST['usuario']);
+    @$usuario = strip_tags($_POST['usuario']);
+    @$email = strip_tags($_POST['email']);
+    @$senha = strip_tags($_POST['senha']);
+    @$senha_confirmacao = strip_tags($_POST['senha_confirmacao']);
+    @$nivel = strip_tags($_POST['nivel']);
+
+    @$nome = $_POST['nome'];
+    @$usuario = $_POST['usuario'];
+    @$email = $_POST['email'];
+    @$senha = sha1($_POST['senha']);
+    @$senha_confirmacao = $_POST['senha_confirmacao'];
+    @$nivel = $_POST['nivel'];
+    @$ativo = 1;
+    @$data = date("Y-m-d");
+    @$hora = date("H:i:s");
+
+
+    include ('../persistencia/classe_conexao.php');
+    include 'classe_mensagens_formularios.php';
+    $novaConexao = new conexao();
+    $novaConexao->conecta();
+
+    $inserir = "INSERT INTO `usuarios` (`nome`, `usuario` , `senha` , `email` , `nivel` , `ativo`, `data`, `hora`)  
+VALUES ('$nome', '$usuario', '$senha', '$email', $nivel, $ativo, '$data', '$hora')";
+    $novaConexao->mysql_query($inserir);
+
+    echo $senha;
+
+    exit();
+}
 ?>
+
+
+
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
@@ -20,80 +54,83 @@ include '../tela/tela.php';
     </head>
     <body>
         <?php
+        include '../tela/tela.php';
         $header = new tela();
         $header->header();
         ?>
 
-        <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
-        <div class="container-fluid">
-            <!-- CLASSE PARA DEFINIR UMA LINHA -->
-            <div class="row-fluid">
-                <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php //include 'Tela/menu_esquerdo.html;'  ?>
-                <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
-                <div class="span10">
-                    <div class="well">
+        <div class="container">
+            <div class="row">
+                <div class="span2 offset2 well-large">
 
-                        <hr />
-                        <form class="form-horizontal" action='../Negocio/validacao.php' method="POST">
-                            <fieldset>
-                                <div id="legend">
-                                    <legend class="">Cadastro de novos usuários</legend>
+                    <!--<div class="alert alert-error">
+                        <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
+                    </div>-->
+                    <form class="form-horizontal" action='' method="POST">
+                        <fieldset>
+                            <div id="legend">
+                                <legend class="">Cadastro de usuários</legend>
+                            </div>
+                            <div class="control-group">
+                                <!-- Username -->
+                                <label class="control-label"  for="nome">Nome Completo</label>
+                                <div class="controls">
+                                    <input type="text" id="nome" name="nome" placeholder="" class="input-xlarge" required="">
+                                    <p class="help-block">Por favor, forneça o nome completo do usuário</p>
                                 </div>
-                                
-                                <div class="control-group">
-                                    <!-- usuario -->
-                                    <label class="control-label"  for="username">Nome completo</label>
-                                    <div class="controls">
-                                        <input type="text" id="nome" name="nome" placeholder="" class="input-xlarge" required="">
-                                    </div>
+                            </div>
+                            <div class="control-group">
+                                <!-- Username -->
+                                <label class="control-label"  for="usuario">Nome de usuário</label>
+                                <div class="controls">
+                                    <input type="text" id="usuario" name="usuario" placeholder="" class="input-xlarge" required="">
+                                    <p class="help-block">Nome de usuário pode conter quaisquer letras ou números, sem espaços</p>
                                 </div>
-                                <div class="control-group">
-                                    <!-- usuario -->
-                                    <label class="control-label"  for="username">Nome de usuário</label>
-                                    <div class="controls">
-                                        <input type="text" id="txtUsuario" name="usuario" placeholder="" class="input-xlarge" required="">
-                                    </div>
-                                </div>
+                            </div>
 
-                                <div class="control-group">
-                                    <!-- senha-->
-                                    <label class="control-label" for="password">Senha</label>
-                                    <div class="controls">
-                                        <input type="password" id="senha" name="senha" placeholder="" class="input-xlarge" required="">
-                                    </div>
+                            <div class="control-group">
+                                <!-- E-mail -->
+                                <label class="control-label" for="email">E-mail</label>
+                                <div class="controls">
+                                    <input type="text" id="email" name="email" placeholder="" class="input-xlarge" required="">
+                                    <p class="help-block">Por favor, forneça seu endereço de e-mail</p>
                                 </div>
-                                <div class="control-group">
-                                    <!-- usuario -->
-                                    <label class="control-label"  for="username">Email</label>
-                                    <div class="controls">
-                                        <input type="text" id="email" name="email" placeholder="" class="input-xlarge" required="">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <!-- usuario -->
-                                    <label class="control-label"  for="username">Nível usuário</label>
-                                    <div class="controls">
-                                        <input type="text" id="nivel" name="nivel" placeholder="" class="input-xlarge" required="">
-                                    </div>
-                                </div>
+                            </div>
 
-
-                                <div class="control-group">
-                                    <!-- botão de acesso -->
-                                    <div class="controls">
-                                        <button class="btn btn-success">Gravar Usuário</button>
-                                        
-                                    </div>
+                            <div class="control-group">
+                                <!-- Password-->
+                                <label class="control-label" for="senha">Senha</label>
+                                <div class="controls">
+                                    <input type="password" id="senha" name="senha" placeholder="" class="input-xlarge" required="">
+                                    <p class="help-block"></p>
                                 </div>
-                            </fieldset>
-                        </form>
-                        <hr />  
-                        <?php
-                        $rodape = new tela();
-                        $rodape->rodape()
-                        ?>
-                    </div>
+                            </div>
+
+                            <div class="control-group">
+                                <!-- Password -->
+                                <label class="control-label"  for="senha_confirmacao">Senha (Confirmação)</label>
+                                <div class="controls">
+                                    <input type="password" id="senha_confirmacao" name="senha_confirmacao" placeholder="" class="input-xlarge" required="">
+                                    <p class="help-block">Por favor, confirme a senha.</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <!-- E-mail -->
+                                <label class="control-label" for="nivel">Nível</label>
+                                <div class="controls">
+                                    <input type="text" id="nivel" name="nivel" placeholder="" class="input-xlarge" required="">
+                                    <p class="help-block">Por favor, forneça o nível de usuário. <br>1-Normal. 2-Adminstrador</p>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <!-- Button -->
+                                <div class="controls">
+                                    <button class="btn btn-success">Gravar Usuário</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form> 
                 </div>
             </div>
         </div>

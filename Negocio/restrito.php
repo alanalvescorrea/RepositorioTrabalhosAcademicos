@@ -40,9 +40,9 @@ include '../tela/tela.php';
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
-                    <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '!'; ?> 
+                    <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '! <br>Nível Acesso:'.$_SESSION['UsuarioNivel'] ; ?> 
 
-                    <?php echo "<a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
+                    <?php echo "<br><a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
 
                     <hr />  
                     <h4>Trabalhos acadêmicos</h4>

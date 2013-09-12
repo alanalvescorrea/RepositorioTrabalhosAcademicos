@@ -24,54 +24,21 @@ include 'tela/tela.php';
         $header->header();
         ?>
 
-        <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
-        <div class="container-fluid">
-            <!-- CLASSE PARA DEFINIR UMA LINHA -->
-            <div class="row-fluid">
-                <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php //include 'Tela/menu_esquerdo.html;'  ?>
-                <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
-                <div class="span10">
-                    <div class="well">
-
-                        <hr />
-                        <form class="form-horizontal" action='Negocio/validacao.php' method="POST">
-                            <fieldset>
-                                <div id="legend">
-                                    <legend class="">Acesso ao sistema</legend>
-                                </div>
-                                <div class="control-group">
-                                    <!-- usuario -->
-                                    <label class="control-label"  for="username">Nome de usuário</label>
-                                    <div class="controls">
-                                        <input type="text" id="txtUsuario" name="usuario" placeholder="" class="input-xlarge">
-                                    </div>
-                                </div>
-
-                                <div class="control-group">
-                                    <!-- senha-->
-                                    <label class="control-label" for="password">Senha</label>
-                                    <div class="controls">
-                                        <input type="password" id="senhatxtSenha" name="senha" placeholder="" class="input-xlarge">
-                                    </div>
-                                </div>
-
-
-                                <div class="control-group">
-                                    <!-- botão de acesso -->
-                                    <div class="controls">
-                                        <button class="btn btn-success">Acessar</button>
-                                        
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                        <hr />  
-                        <?php
-                        $rodape = new tela();
-                        $rodape->rodape()
-                        ?>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="span4 offset4 well">
+                    <legend>Acesso ao sistema</legend>
+                    <!--<div class="alert alert-error">
+                        <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
+                    </div>-->
+                    <form method="POST" action="Negocio/validacao.php" accept-charset="UTF-8">
+                        <input type="text" id="txtUsuario" class="span4" name="usuario" placeholder="nome de usuário">
+                        <input type="password" id="senhatxtSenha" class="span4" name="senha" placeholder="senha">
+                        <label class="checkbox">
+                            
+                        </label>
+                        <button type="submit" name="submit" class="btn btn-info btn-block">Entrar</button>
+                    </form>    
                 </div>
             </div>
         </div>
