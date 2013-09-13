@@ -20,6 +20,9 @@ include '../tela/tela.php';
         <script src="../js/bootstrap.min.js"></script>
 
 
+
+
+
     </head>
     <body>
         <?php
@@ -59,6 +62,40 @@ include '../tela/tela.php';
                                     <input type="text" id="titulo" name="titulo" placeholder="" class="input-xlarge" required="">
                                 </div>
                             </div>
+                            <!-- aluno -->
+                            <div class="control-group">
+                                <label class="control-label"  for="aluno">Aluno</label>
+                                <div class="controls">
+                                    <?php include 'aluno.php'; ?>
+                                    <?php /*echo 'cadastrar'; */?> 
+                                    <a href="#" onclick="window.open('aluno_cadastrar.php', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=1000, HEIGHT=500');">Cadastrar Aluno</a>
+
+                                    <?php /*echo '<a href="aluno_cadastrar.php" target="_blank"> novo aluno</a>'; */?>
+
+                                </div>
+                            </div>
+                            <!--form cadastrar novon aluno-->
+                            <!-- orientador -->
+                            <div class="control-group">
+                                <label class="control-label"  for="aluno">Orientador</label>
+                                <div class="controls">
+                                    <?php include 'orientador.php'; ?>
+                                    <?php /*echo 'cadastrar'; */?> 
+                                    <?php /*echo '<a href="orientador_cadastrar.php" target="_blank"> novo orientador</a>'; */?>
+                                    <a href="#" onclick="window.open('orientador_cadastrar.php', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=1000, HEIGHT=500');">Cadastrar Orientador</a>
+
+                                </div>
+                            </div>
+                            <!-- fim orientador -->
+                             <!-- data -->
+                            <div class="control-group">
+
+                                <label class="control-label"  for="data">Data Apresentação  </label>
+                                <div class="controls">
+                                    <?php include '../tela/date_time_picker.html'; ?>
+                                </div>
+                            </div>
+                             <!-- fim data -->
 
                             <!-- tipo -->
                             <div class="control-group">
@@ -80,6 +117,14 @@ include '../tela/tela.php';
                                     <textarea class="field span12" id="resumo" rows="6" name="resumo" required=""></textarea>
                                 </div>
                             </div>
+                            <!-- palavras chaves -->
+                            <div class="control-group">
+                                <label class="control-label"  for="palavras_chave">Palavras-Cahave</label>
+                                <div class="controls">
+                                    <input type="text" id="palavra_chave" name="palavras_chave" class="input-xlarge" required="">
+                                </div>
+                            </div>
+                            <!-- fim palavras chaves -->
                             <!--abstract-->
                             <div class="control-group">
 
@@ -97,12 +142,40 @@ include '../tela/tela.php';
                                     <input type="text" id="num_pag" name="numero_paginas" placeholder="" class="input-small" required="">
                                 </div>
                             </div>
-                            <!-- data -->
-                            <div class="control-group">
+                           
 
-                                <label class="control-label"  for="data">Data Apresentação  </label>
+
+
+                            <!-- area -->
+                            <div class="control-group">
+                                <label class="control-label"  for="area">Area</label>
                                 <div class="controls">
-                                    <?php include '../tela/date_time_picker.html'; ?>
+                                    <?php include 'area.php'; ?>
+                                </div>
+                            </div>
+
+                            <!-- instituição -->
+                            <div class="control-group">
+                                <label class="control-label"  for="aluno">Instituicão</label>
+                                <div class="controls">
+                                    <?php include 'instituicao.php'; ?>
+                                    <?php /*echo 'cadastrar'; */?> 
+                                    <?php /*echo '<a href="instituicao_cadastrar.php" target="_blank"> nova instituição</a>'; */?>
+                                    <a href="#" onclick="window.open('instituicao_cadastrar.php', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=1000, HEIGHT=500');">Cadastrar Instituição</a>
+
+                                </div>
+                            </div>
+
+                            <!-- orientador -->
+                            <div class="control-group">
+                                <label class="control-label"  for="aluno">Enviar arquivo</label>
+                                <div class="controls">
+                                    <!--
+                                    <?php /* include 'upload.php'; ?>
+                                      <?php echo '<a href="upload.php" target="_blank"> </a>'; */ ?>  
+                                    -->
+                                    <a href="#" onclick="window.open('upload.php', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=770, HEIGHT=400');">Selecionar aquivo</a>
+
                                 </div>
                             </div>
 
@@ -113,52 +186,7 @@ include '../tela/tela.php';
                                     <input type="text" id="local_pdf" name="local_pdf" class="input-xlarge" required="">
                                 </div>
                             </div>
-
-                            <!-- palavras chaves -->
-                            <div class="control-group">
-                                <label class="control-label"  for="palavras_chave">Palavras-Cahave</label>
-                                <div class="controls">
-                                    <input type="text" id="palavra_chave" name="palavras_chave" class="input-xlarge" required="">
-                                </div>
-                            </div>
-                            <!-- area -->
-                            <div class="control-group">
-                                <label class="control-label"  for="area">Area</label>
-                                <div class="controls">
-                                    <?php include 'area.php'; ?>
-                                </div>
-                            </div>
-                            <!-- aluno -->
-                            <div class="control-group">
-                                <label class="control-label"  for="aluno">Aluno</label>
-                                <div class="controls">
-                                    <?php include 'aluno.php'; ?>
-                                    <?php echo 'cadastrar'; ?> 
-                                    <?php echo '<a href="aluno_cadastrar.php" target="_blank"> novo aluno</a>'; ?>
-                                    <!--form cadastrar novon aluno
-                                    
-                                    -->
-                                </div>
-                            </div>
-                            <!-- instituição -->
-                            <div class="control-group">
-                                <label class="control-label"  for="aluno">Instituicão</label>
-                                <div class="controls">
-                                    <?php include 'instituicao.php'; ?>
-                                    <?php echo 'cadastrar'; ?> 
-                                    <?php echo '<a href="instituicao_cadastrar.php" target="_blank"> nova instituição</a>'; ?>
-                                </div>
-                            </div>
-                            <!-- orientador -->
-                            <div class="control-group">
-                                <label class="control-label"  for="aluno">Orientador</label>
-                                <div class="controls">
-                                    <?php include 'orientador.php'; ?>
-                                    <?php echo 'cadastrar'; ?> 
-                                    <?php echo '<a href="orientador_cadastrar.php" target="_blank"> novo orientador</a>'; ?>
-                                </div>
-                            </div>
-
+                            <!-- fim local pdf -->
                             <!-- Button -->
                             <div class="control-group">
 
