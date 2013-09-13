@@ -68,7 +68,7 @@ class tela {
                     </li>
                     <li>
                         <a href="instituicao_cadastrar.php">
-                            <i class="icon-globe"></i>
+                            <i class="icon-certificate"></i>
                                 Cadastrar nova instituição
                         </a>
                     </li>
@@ -82,6 +82,12 @@ class tela {
                         <a href="listar_trabalho.php">
                             <i class="icon-edit"></i>
                                 Editar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../interface_usuario.php">
+                            <i class="icon-globe"></i>
+                                Visualizar página web
                         </a>
                     </li>
                     

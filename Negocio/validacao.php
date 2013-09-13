@@ -34,7 +34,10 @@
     if (mysql_num_rows($query) != 1) {
         // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
         echo "Login inválido!";
-       
+        echo '<div class="alert">
+  <a class="close" data-dismiss="alert">×</a>
+  <strong>Warning!</strong> Best check yo self, youre not looking too good.
+        </div>';
        
     } else {
         // Salva os dados encontados na variável $resultado

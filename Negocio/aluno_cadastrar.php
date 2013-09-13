@@ -109,7 +109,7 @@ if (isset($_POST['nome'])) {
                 </div>
             </div>
             <?php
-            
+            $rodape=new tela();
             $rodape->rodape();
             ?>
     </body>
