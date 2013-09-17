@@ -24,6 +24,7 @@ if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <link href="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> 
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <?php
@@ -61,26 +62,27 @@ if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
 
                     while ($dados = $novaConexao->resultado()) {
                         @$string = $dados[resumo];
-                        $string = substr($string, 0, 190);
+                        $string = substr($string, 0, 220);
                         echo '<hr>';
                         echo "<strong>$dados[titulo]</strong>.<br> ";
                         echo " <i>Resumo:</i> $string ...<br />";
+                        echo '<hr>';
                         echo " <i>Autor:</i> $dados[aluno]<br>";
                         echo " <i>Orientador:</i> $dados[orientador]<br />";
                         echo " <i>Data:</i> $dados[data]<br />";
                         echo " <i>Área:</i> $dados[area]<br />";
                         echo " <i>Palavras-Chave:</i> $dados[palavras_chave]<br />";
-                        echo "<a href=\" $dados[local_pdf]\"</a>Arquivo";
+                        echo "<a href=\" $dados[local_pdf]\"</a>Arquivo Completo";
+
                         echo '<hr>';
                     }
                     ?>
 
                 </div>
+                <?php
+                ?>
             </div>
-            <?php
-            $rodaPe = new tela();
-            $rodaPe->rodape();
-            ?>
+
 
     </body>
 </html>

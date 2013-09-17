@@ -95,6 +95,12 @@ class tela {
         </div>
 ';
     }
+    
+    function quem_somos() {
+        echo '<center>';
+        echo 'Sistema de Controle de Trabalhos Academicos';
+        echo '</center>';
+    }
 
 }
 

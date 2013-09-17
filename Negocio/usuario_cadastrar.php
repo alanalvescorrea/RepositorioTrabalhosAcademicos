@@ -11,11 +11,18 @@ if (isset($_POST['nome'])) {
     @$usuario = $_POST['usuario'];
     @$email = $_POST['email'];
     @$senha = sha1($_POST['senha']);
-    @$senha_confirmacao = $_POST['senha_confirmacao'];
+    @$senha_confirmacao = sha1($_POST['senha_confirmacao']);
     @$nivel = $_POST['nivel'];
     @$ativo = 1;
     @$data = date("Y-m-d");
     @$hora = date("H:i:s");
+
+    if ($senha != $senha_confirmacao) {
+        echo '<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+                    alert ("Senhas informadas divergem. Informe senhas iguais!")
+              </SCRIPT>';
+        echo '<script language= "JavaScript"> location.href="usuario_cadastrar.php"</script>';
+    }
 
 
     include ('../persistencia/classe_conexao.php');
@@ -23,11 +30,23 @@ if (isset($_POST['nome'])) {
     $novaConexao = new conexao();
     $novaConexao->conecta();
 
+
     $inserir = "INSERT INTO `usuarios` (`nome`, `usuario` , `senha` , `email` , `nivel` , `ativo`, `data`, `hora`)  
 VALUES ('$nome', '$usuario', '$senha', '$email', $nivel, $ativo, '$data', '$hora')";
     $novaConexao->mysql_query($inserir);
 
-    echo $senha;
+    if (!$novaConexao->mysql_query($inserir)) {
+        $mensagemSucesso = new mensagens_form();
+        $mensagemSucesso->sucesso();
+        echo '<a href="javascript:history.go(-1)">Voltar</a>';
+    } else {
+
+        $mensagemErro = new mensagens_form();
+        $mensagemErro->erro();
+        echo '<a href="javascript:history.go(-1)">Voltar</a>';
+    }
+
+
 
     exit();
 }
