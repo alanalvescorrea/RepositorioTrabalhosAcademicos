@@ -90,12 +90,20 @@ class tela {
                                 Visualizar página web
                         </a>
                     </li>
+                    <li>
+                        <a href="usuario_cadastrar.php">
+                            <i class="icon-globe"></i>
+                                Cadastrar usuário
+                        </a>
+                    </li>
                     
+                   
             </ul>
         </div>
 ';
+        
     }
-    
+
     function quem_somos() {
         echo '<center>';
         echo 'Sistema de Controle de Trabalhos Academicos';

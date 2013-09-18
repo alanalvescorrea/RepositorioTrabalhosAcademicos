@@ -57,7 +57,7 @@ if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
 
                     <?php
                     if (empty($busca)) {
-                        echo "Por favor, insira um termo para sua pesquisa.";
+                        echo "<center>Por favor, insira um termo para sua pesquisa.</center>";
                         exit();
                     }
 
@@ -72,8 +72,7 @@ if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
                         echo "<i>Data Apresentação: </i>" . strftime("%d/%m/%Y ", strtotime(@$dados[data])) . "<br>";
                         echo " <i>Área:</i> $dados[area]<br />";
                         echo " <i>Palavras-Chave:</i> $dados[palavras_chave]<br />";
-                        echo "<a href=\" $dados[local_pdf]\"</a>Arquivo Completo";
-
+                        echo "<a href=\" $dados[local_pdf]\" >Arquivo Completo</a>";
                         echo '<hr>';
                     }
                     ?>

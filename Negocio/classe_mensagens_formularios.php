@@ -1,4 +1,5 @@
 <?php
+
 /*
  * @author Alan
  */
@@ -29,5 +30,23 @@ class mensagens_form {
             </div>';
         echo '</div>';
     }
+
+    function erro_login() {
+        echo '<link href="../css/alert.css" rel="stylesheet" type="text/css" />
+                <div class="alerts">
+               
+            
+
+                <div class="alert-message warning">
+                <a class="close" href="#">×</a>
+                <strong>
+                <a href="../index.php" class="alert-link">Sabemos que isso é chato, mas os dados estão incorretos. Tente novamente :( </a>
+                </strong>
+                
+                </div>
+                </div>';
+    }
+
 }
+
 ?>
