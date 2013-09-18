@@ -105,7 +105,7 @@ include '../tela/tela.php';
                                         <option>Monografia</option>
                                         <option>Dissertação</option>
                                         <option>Tese</option>
-                                        <option>Paper</option>
+                                        <!--<option>Paper</option>-->
                                     </select>
                                 </div>
                             </div>
