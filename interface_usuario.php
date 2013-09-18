@@ -43,16 +43,17 @@ if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
                 <div class="span10">
                     <hr />  
                     <legend class="breadcrumb">Seja Bem-Vindo ao Repositório de Acervo Acadêmico</legend>
-                    <form action=" " method="post">
-                        <input type="text" name="palavra" required=""/>
-                        <div class="control-group">
+                    <center>
+                        <form action=" " method="post">
+                            <input type="text" name="palavra" required="" class="input-xlarge"/>
+                            <div class="control-group">
 
-                            <div class="controls">
-                                <button class="btn btn-success">Pesquisar</button>
+                                <div class="controls">
+                                    <button class="btn btn-success">Pesquisar</button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-
+                        </form>
+                    </center>
 
                     <?php
                     if (empty($busca)) {
@@ -62,11 +63,10 @@ if (empty($consulta)) { //Se nao achar nada, lança essa mensagem
 
                     while ($dados = $novaConexao->resultado()) {
                         @$string = $dados[resumo];
-                        $string = substr($string, 0, 220);
+                        $string = substr($string, 0, 150);
                         echo '<hr>';
                         echo "<strong>$dados[titulo]</strong>.<br> ";
                         echo " <i>Resumo:</i> $string ...<br />";
-                        echo '<hr>';
                         echo " <i>Autor:</i> $dados[aluno]<br>";
                         echo " <i>Orientador:</i> $dados[orientador]<br />";
                         echo "<i>Data Apresentação: </i>" . strftime("%d/%m/%Y ", strtotime(@$dados[data])) . "<br>";
