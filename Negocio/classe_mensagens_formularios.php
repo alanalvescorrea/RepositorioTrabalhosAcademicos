@@ -14,8 +14,8 @@ class mensagens_form {
         echo '<link href="../css/alert.css" rel="stylesheet" type="text/css" />';
         echo '<div class="alerts">';
         echo '<div class="alert-message warning">
-                <a class="close" href="#">×</a>
-                <p><strong>Ops...</strong> Dados não foram gravados. TENTE NOVAMENTE. <a href="#"></a></p>
+                <a class="close" href="#">x</a>
+                <p><strong>Ops...</strong> Dados n�o foram gravados. TENTE NOVAMENTE. <a href="#"></a></p>
             </div>';
         echo '</div>';
     }
@@ -25,7 +25,7 @@ class mensagens_form {
         echo '<link href="../css/alert.css" rel="stylesheet" type="text/css" />';
         echo '<div class="alerts">';
         echo '<div class="alert-message success">
-                <a class="close" href="#">×</a>
+                <a class="close" href="#">x</a>
                 <p><strong>Legal..</strong> Dados gravados com sucesso!!! <a href="#"></a></p>
             </div>';
         echo '</div>';
@@ -40,7 +40,7 @@ class mensagens_form {
                 <div class="alert-message warning">
                 <a class="close" href="#">×</a>
                 <strong>
-                <a href="../index.php" class="alert-link">Sabemos que isso é chato, mas os dados estão incorretos. Tente novamente :( </a>
+                <a href="../index.php" class="alert-link">Sabemos que isso � chato, mas os dados est�o incorretos. Tente novamente :( </a>
                 </strong>
                 
                 </div>

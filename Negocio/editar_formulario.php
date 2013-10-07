@@ -7,7 +7,7 @@ include '../tela/tela.php';
 <!DOCTYPE html> 
 <html lang="en"> 
     <head> 
-        <meta charset="utf-8"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <link href="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> 
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
@@ -30,11 +30,11 @@ include '../tela/tela.php';
                 <!-- COLUNA OCUPANDO 10 ESPA√áOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
-                    <?php echo 'Ol√° ' . $_SESSION['UsuarioNome'] . '!'; ?> 
+                    <?php echo 'Ol· ' . $_SESSION['UsuarioNome'] . '!'; ?> 
                     <?php echo "<a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
 
                     <hr />  
-                    <legend class="breadcrumb">Editar Trabalhos acad√™micos cadastrados</legend>
+                    <legend class="breadcrumb">Editar Trabalhos AcadÍmicos Cadastrados</legend>
 
                     <?php
                     $id = $_GET['id']; // Recebendo o valor vindo do link
@@ -52,7 +52,7 @@ include '../tela/tela.php';
 
                             <!-- editar titulo -->
                             <div class="control-group">
-                                <label class="control-label"  for="titulo">T√≠tulo do trabalho:</label>
+                                <label class="control-label"  for="titulo">TÌtulo do trabalho:</label>
                                 <div class="controls">
                                     <input type="text" name="titulo" value="<?php echo $linha['titulo']; ?>" class="input-xxlarge"/> <br /><!‚Äì mostrando dentro do form o valor do campo nome ‚Äì>
                                 </div>
@@ -86,7 +86,7 @@ include '../tela/tela.php';
 
                                     <!-- editar numero de p√°ginas -->
                                     <div class="control-group">
-                                        <label class="control-label"  for="numero_paginas">N√∫mero de P√°ginas:</label>
+                                        <label class="control-label"  for="numero_paginas">N˙mero de P·ginas:</label>
                                         <div class="controls">
                                             <input type="text" name="numero_paginas" value="<?php echo $linha['numero_paginas']; ?>" class="input-mini"/> <br /><br />
                                         </div>
@@ -94,7 +94,7 @@ include '../tela/tela.php';
 
                                         <!-- editar data apresenta√ß√£o -->
                                         <div class="control-group">
-                                            <label class="control-label"  for="data">Data Apresenta√ß√£o:</label>
+                                            <label class="control-label"  for="data">Data ApresentaÁ„o:</label>
                                             <div class="controls">
                                                 <input type="text" name="data" value="<?php echo $linha['data']; ?>" /> <br /><br />
                                             </div>
@@ -118,7 +118,7 @@ include '../tela/tela.php';
 
                                                     <!-- editar area -->
                                                     <div class="control-group">
-                                                        <label class="control-label"  for="area">√Årea do conhecimento:</label>
+                                                        <label class="control-label"  for="area">¡rea do Conhecimento:</label>
                                                         <div class="controls">
                                                             <input type="text" name="area" value="<?php echo $linha['area']; ?>" /> <br />    <br />                     
                                                         </div>
@@ -134,7 +134,7 @@ include '../tela/tela.php';
 
                                                             <!-- editar institui√ß√£o -->
                                                             <div class="control-group">
-                                                                <label class="control-label"  for="instituicao">Institui√ß√£o:</label>
+                                                                <label class="control-label"  for="instituicao">InstituiÁ„o:</label>
                                                                 <div class="controls">
                                                                     <input type="text" name="instituicao" value="<?php echo $linha['instituicao']; ?>" class="input-xxlarge"/> <br /><br />
                                                                 </div>
@@ -160,7 +160,7 @@ include '../tela/tela.php';
                                                                         <div class="control-group">
                                                                             <!-- bot√£o de acesso -->
                                                                             <div class="controls">
-                                                                                <button class="btn btn-success">Atualizar Informa√ß√µes</button>
+                                                                                <button class="btn btn-success">Atualizar InformaÁıes</button>
 
                                                                             </div>
                                                                         </div>

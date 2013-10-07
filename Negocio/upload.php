@@ -39,7 +39,7 @@ ftp_close($ftp_con);
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
         <!-- JQUERY -->
         <script src = "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script>

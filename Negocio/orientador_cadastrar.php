@@ -30,7 +30,7 @@ if (isset($_POST['nome'])) {
 <!DOCTYPE html> 
 <html lang="en"> 
     <head> 
-        <meta charset="utf-8"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <link href="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> 
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
@@ -53,7 +53,7 @@ if (isset($_POST['nome'])) {
                 <!-- COLUNA OCUPANDO 10 ESPAÃ‡OS NO GRID -->
                 <br><br><br>
                 <div class="span10">
-                    <?php echo 'OlÃ¡ ' . $_SESSION['UsuarioNome'] . '!'; ?> 
+                    <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '!'; ?> 
 
                     <?php echo "<a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
 
@@ -67,7 +67,7 @@ if (isset($_POST['nome'])) {
                     <!-- model content -->	
                     <div id="form-content" class="modal hide fade in" style="display: none; ">
                         <div class="modal-header">
-                            <a class="close" data-dismiss="modal">Ã—</a>
+                            <a class="close" data-dismiss="modal">x</a>
                             <h3>Cadastro de orientador</h3>
                         </div>
                         <div>
@@ -79,8 +79,8 @@ if (isset($_POST['nome'])) {
                                             <li><input class="input-xlarge" value="nome orientador" type="text" name="nome"></li>
                                             <li class="nav-header">Email</li>
                                             <li><input class="input-xlarge" value="mail@mail.com" type="text" name="email"></li>
-                                            <li class="nav-header">ObservaÃ§Ã£o</li>
-                                            <li><textarea class="input-xlarge" name="observacao" rows="3"> InformaÃ§Ãµes adicionais sobre o aluno.
+                                            <li class="nav-header">Observação</li>
+                                            <li><textarea class="input-xlarge" name="observacao" rows="3"> Informações adicionais sobre o aluno.
                                                 </textarea></li>
                                         </ul> 
                                     </div>

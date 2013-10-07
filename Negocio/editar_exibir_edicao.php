@@ -6,7 +6,7 @@ include '../tela/tela.php';
 <!DOCTYPE html> 
 <html lang="en"> 
     <head> 
-        <meta charset="utf-8"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <link href="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> 
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
@@ -29,11 +29,11 @@ include '../tela/tela.php';
                 <!-- COLUNA OCUPANDO 10 ESPAÃ‡OS NO GRID -->
                 <br><br><br>
                 <div class="span10">
-                    <?php echo 'OlÃ¡ ' . $_SESSION['UsuarioNome'] . '!'; ?> 
+                    <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '!'; ?> 
                     <?php echo "<a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
 
                     <hr />  
-                    <legend class="breadcrumb">Trabalhos acadÃªmicos cadastrados</legend>
+                    <legend class="breadcrumb">Trabalhos Acadêmicos Cadastrados</legend>
                     <!--<span class="label label-info">Dados editados com sucesso!</span>-->
                     <div class="alert alert-success">
                         Dados editados com sucesso!

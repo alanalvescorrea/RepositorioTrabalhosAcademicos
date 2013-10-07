@@ -5,7 +5,7 @@ include '../tela/tela.php';
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
         <!-- JQUERY -->
         <script src = "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script>
@@ -42,7 +42,7 @@ include '../tela/tela.php';
                 <!-- COLUNA OCUPANDO 10 ESPAÃ‡OS NO GRID -->
                 <br><br><br>
                 <div class="span10">
-                    <?php echo 'OlÃ¡ ' . $_SESSION['UsuarioNome'] . '!'; ?> 
+                    <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '!'; ?> 
 
                     <?php echo "<a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
 
@@ -52,12 +52,12 @@ include '../tela/tela.php';
                     <form class="form-horizontal" action='classe_trabalho_academico.php' method="POST">
                         <fieldset>
                             <div id="legend">
-                                <legend class="breadcrumb">Cadastrar novo trabalho acadÃªmico</legend>
+                                <legend class="breadcrumb">Cadastrar trabalho Acadêmico</legend>
                             </div>
 
                             <!-- titulo -->
                             <div class="control-group">
-                                <label class="control-label"  for="titulo">TÃ­tulo do trabalho</label>
+                                <label class="control-label"  for="titulo">Título do trabalho</label>
                                 <div class="controls">
                                     <input type="text" id="titulo" name="titulo" placeholder="" class="input-xlarge" required="">
                                 </div>
@@ -90,7 +90,7 @@ include '../tela/tela.php';
                              <!-- data -->
                             <div class="control-group">
 
-                                <label class="control-label"  for="data">Data ApresentaÃ§Ã£o  </label>
+                                <label class="control-label"  for="data">Data Apresentação  </label>
                                 <div class="controls">
                                     <?php include '../tela/date_time_picker.html'; ?>
                                 </div>
@@ -103,7 +103,7 @@ include '../tela/tela.php';
                                 <div class="controls">
                                     <select class="selectpicker show-tick" id="tipo" name="tipo" required="">
                                         <option>Monografia</option>
-                                        <option>DissertaÃ§Ã£o</option>
+                                        <option>Dissertação</option>
                                         <option>Tese</option>
                                         <!--<option>Paper</option>-->
                                     </select>
@@ -137,7 +137,7 @@ include '../tela/tela.php';
                             <!-- numero paginas -->
                             <div class="control-group">
 
-                                <label class="control-label"  for="num_pag">NÃºmero de PÃ¡ginas</label>
+                                <label class="control-label"  for="num_pag">Número de Páginas</label>
                                 <div class="controls">
                                     <input type="text" id="num_pag" name="numero_paginas" placeholder="" class="input-small" required="">
                                 </div>
@@ -148,7 +148,7 @@ include '../tela/tela.php';
 
                             <!-- area -->
                             <div class="control-group">
-                                <label class="control-label"  for="area">Area</label>
+                                <label class="control-label"  for="area">Área</label>
                                 <div class="controls">
                                     <?php include 'area.php'; ?>
                                 </div>
@@ -156,7 +156,7 @@ include '../tela/tela.php';
 
                             <!-- instituiÃ§Ã£o -->
                             <div class="control-group">
-                                <label class="control-label"  for="aluno">InstituicÃ£o</label>
+                                <label class="control-label"  for="aluno">Instituicão</label>
                                 <div class="controls">
                                     <?php include 'instituicao.php'; ?>
                                     <?php /*echo 'cadastrar'; */?> 
