@@ -7,7 +7,7 @@ class tela {
 	
 	/* HEADER************************************************** */
 	function header() {
-		$logo = '<img src="../img/logoSistemaMenor.gif" alt="Tim Berners-Lee" />';
+		$logo = '<br><img src="../img/logoSistema.png" alt="Tim Berners-Lee" align="right"/>';
 		
 		echo '<div class="row-fluid">
                  <div class="span12">
@@ -15,7 +15,7 @@ class tela {
                          <div class="navbar-inner">
                              <div class="container">
         		' . $logo . '
-                                <h2>RepositÃ³rio Trabalhos AcadÃªmicos</h2>
+                                <h2>Repositório Trabalhos Acadêmicos</h2>
                              </div>
                         </div>
                     </div>
@@ -25,26 +25,24 @@ class tela {
 	
 	/* TITULO************************************************** */
 	function titulo() {
-		echo '<title>RTA</title>';
+		
+		echo '<title>Ptolomeu</title>';
 	}
 	
 	/* MENU ESQUERDO************************************************** */
 	function menu_esquerdo() {
 		include '../negocio/seguranca.php';
-		$tipoUsuario = $_SESSION['UsuarioNivel'];
+		$tipoUsuario = $_SESSION ['UsuarioNivel'];
 		
-		if ($_SESSION['UsuarioNivel']==2) {
-			$menuRestrito= '<li>
+		if ($_SESSION ['UsuarioNivel'] == 2) {
+			$menuRestrito = '<li>
         		
                         <a href="usuario_cadastrar.php">
                             <i class="icon-plus"></i>
-                                Cadastrar usuÃ¡rio
+                                Cadastrar usuário
                         </a>
-                    </li>      '
-			
-			;
+                    </li>      ';
 		}
-		
 		
 		echo '
         <div class="span2">
@@ -60,25 +58,25 @@ class tela {
                     <li>
                         <a href="trabalho_cadastrar.php">
                             <i class="icon-book"></i>
-                                Cadastrar novo trabalho
+                                Cadastrar trabalho
                         </a>
                    </li>
                     <li>
                         <a href="aluno_cadastrar.php">
                             <i class="icon-user"></i>
-                                Cadastrar novo aluno
+                                Cadastrar aluno
                         </a>
                     </li>
                      <li>
                         <a href="orientador_cadastrar.php">
                             <i class="icon-briefcase"></i>
-                                Cadastrar novo orientador
+                                Cadastrar orientador
                         </a>
                     </li>
                     <li>
                         <a href="instituicao_cadastrar.php">
                             <i class="icon-certificate"></i>
-                                Cadastrar nova instituiÃ§Ã£o
+                                Cadastrar instituição
                         </a>
                     </li>
                     <li>
@@ -96,12 +94,12 @@ class tela {
                     <li>
                         <a href="../interface_usuario.php">
                             <i class="icon-globe"></i>
-                                Visualizar pÃ¡gina web
+                                Visualizar página web
                         </a>
                     </li>
 
 				
-				' . $menuRestrito. '
+				' . $menuRestrito . '
 				 
                                           			
             </ul>
