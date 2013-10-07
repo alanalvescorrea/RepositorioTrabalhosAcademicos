@@ -1,43 +1,52 @@
 <?php
-
 class tela {
-    /* RODAPE************************************************** */
-
-    function rodape() {
-        echo "CopyLeft 2013";
-    }
-
-    /* HEADER************************************************** */
-
-    function header() {
-
-        echo '<div class="row-fluid">
+	/* RODAPE************************************************** */
+	function rodape() {
+		echo "CopyLeft 2013";
+	}
+	
+	/* HEADER************************************************** */
+	function header() {
+		$logo = '<img src="../img/logoSistemaMenor.gif" alt="Tim Berners-Lee" />';
+		
+		echo '<div class="row-fluid">
                  <div class="span12">
                      <div class="navbar">
                          <div class="navbar-inner">
                              <div class="container">
+        		' . $logo . '
                                 <h2>Repositório Trabalhos Acadêmicos</h2>
                              </div>
                         </div>
                     </div>
                 </div>
             </div>';
-    }
-
-    /* TITULO************************************************** */
-
-    function titulo() {
-
-        echo '<title>RTA</title>';
-    }
-
-    /* MENU ESQUERDO************************************************** */
-
-    function menu_esquerdo() {
-
-
-
-        echo'
+	}
+	
+	/* TITULO************************************************** */
+	function titulo() {
+		echo '<title>RTA</title>';
+	}
+	
+	/* MENU ESQUERDO************************************************** */
+	function menu_esquerdo() {
+		include '../negocio/seguranca.php';
+		$tipoUsuario = $_SESSION['UsuarioNivel'];
+		
+		if ($_SESSION['UsuarioNivel']==2) {
+			$menuRestrito= '<li>
+        		
+                        <a href="usuario_cadastrar.php">
+                            <i class="icon-plus"></i>
+                                Cadastrar usuário
+                        </a>
+                    </li>      '
+			
+			;
+		}
+		
+		
+		echo '
         <div class="span2">
              <h2> Menu </h2>
                 <ul class="nav nav-tabs nav-stacked">
@@ -90,26 +99,19 @@ class tela {
                                 Visualizar página web
                         </a>
                     </li>
-                    <li>
-                        <a href="usuario_cadastrar.php">
-                            <i class="icon-globe"></i>
-                                Cadastrar usuário
-                        </a>
-                    </li>
-                    
-                   
+
+				
+				' . $menuRestrito. '
+				 
+                                          			
             </ul>
-        </div>
-';
-        
-    }
-
-    function quem_somos() {
-        echo '<center>';
-        echo 'Sistema de Controle de Trabalhos Academicos';
-        echo '</center>';
-    }
-
+        </div>';
+	}
+	function quem_somos() {
+		echo '<center>';
+		echo 'Sistema de Controle de Trabalhos Academicos';
+		echo '</center>';
+	}
 }
 
 ?>

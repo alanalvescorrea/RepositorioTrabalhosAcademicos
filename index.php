@@ -19,51 +19,34 @@ include 'tela/tela.php';
 
     </head>
     <body>
-        <?php
-        $header = new tela();
-        $header->header();
-        ?>
+       <br>
+         <br>
+           <br>
+             <br>
+               <br>
 
         <div class="container">
             <div class="row">
                 <div class="span4 offset4 well">
-                    <legend>Acesso ao sistema</legend>
-                    <!--<div class="alert alert-error">
-                        <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
-                    </div>-->
+              <img src="img/logoSistema.png" alt="Tim Berners-Lee" />
+                 
+                      <legend>Acesso ao sistema</legend>
                     <form method="POST" action="Negocio/validacao.php" accept-charset="UTF-8">
-                        <input type="text" id="txtUsuario" class="span4" name="usuario" placeholder="nome de usuário">
-                        <input type="password" id="senhatxtSenha" class="span4" name="senha" placeholder="senha">
+                      
+                        <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span><input type="text" id="txtUsuario" name="usuario" placeholder="nome de usuário"></div>
+                        <div class="input-prepend"><span class="add-on"><i class="icon-lock"></i></span><input type="password" id="senhatxtSenha" name="senha" placeholder="senha"></div>
+                       
+                       
+                       
                         <label class="checkbox">
 
                         </label>
                         <button type="submit" name="submit" class="btn btn-info btn-block">Entrar</button>
                     </form>   
                     <strong>Controle de Produções Acadêmicas</strong><br><br>
-                    Desenvolvedores: Alan Corre e Melina Borba<br>
-                    <!-- twitter alan-->
-                    <a href="https://twitter.com/Alan_F" class="twitter-follow-button" data-show-count="false" data-lang="pt">Seguir @Alan_F</a>
-                    <script>!function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + '://platform.twitter.com/widgets.js';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, 'script', 'twitter-wjs');</script>
-                    <!-- fim twitter alan-->
-                    <br>
-                    <a href="https://twitter.com/melsborba" class="twitter-follow-button" data-show-count="false" data-lang="pt">Seguir @Alan_F</a>
-                    <script>!function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + '://platform.twitter.com/widgets.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, 'script', 'twitter-wjs');</script>
+                    Desenvolvedores: Alan Correa e Melina Borba<br>
+                    Apoio:  <br><img src="img/IFRS.gif" alt="Tim Berners-Lee" />
+                   
                 </div>
             </div>
 
