@@ -25,7 +25,6 @@ class tela {
 	
 	/* TITULO************************************************** */
 	function titulo() {
-		
 		echo '<title>Ptolomeu</title>';
 	}
 	

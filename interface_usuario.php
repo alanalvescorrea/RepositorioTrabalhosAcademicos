@@ -1,7 +1,7 @@
 <?php
 include ('Persistencia/classe_conexao.php');
-include 'Negocio/classe_mensagens_formularios.php';
-include 'tela/tela.php';
+include ('Negocio/classe_mensagens_formularios.php');
+include ('tela/tela.php');
 
 // ConexÃ£o e consulta ao Mysql
 $novaConexao = new conexao ();
@@ -33,9 +33,9 @@ if (empty ( $consulta )) { // Se nao achar nada, lanÃ§a essa mensagem
 </head>
 <body>
         <?php
-								$headerNovo = new tela ();
-								$headerNovo->header ();
-								?>
+        $header = new tela();
+        $header->header();
+        ?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
 	<div class="container-fluid">
