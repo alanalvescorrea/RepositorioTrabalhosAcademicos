@@ -1,7 +1,6 @@
 <?php
-include '../negocio/seguranca.php';
-include '../tela/tela.php';
-require '../interface/html.class.php';
+include 'seguranca.php';
+require 'interface/html.class.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,14 +10,13 @@ require '../interface/html.class.php';
         $carregaClasseHtml->includes();
         $carregaClasseHtml->unicode();
         $carregaClasseHtml->titulo();
-        $titulo = new tela ();
         ?>
     </head>
 
     <body>
         <?php
-        $header = new tela ();
-        $header->header();
+        $header = new html ();
+        $header->topoSistema();
         ?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
@@ -27,7 +25,7 @@ require '../interface/html.class.php';
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
                 <?php
-                $menuEsquerdo = new tela ();
+                $menuEsquerdo = new html ();
                 $menuEsquerdo->menu_esquerdo();
                 ?>
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
@@ -35,10 +33,10 @@ require '../interface/html.class.php';
                 <br>
                 <br>
                 <div class="span10">
-                    <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '! <br>Nível Acesso:' . $_SESSION['UsuarioNivel']; ?> 
-                    <?php echo "<br><a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
-
-                    <hr />
+                    <?php
+                    $informacoesSobreSessao = new html();
+                    $informacoesSobreSessao->informarSessao();
+                    ?>
 
                     <div class="span10">
                         <h4>Trabalhos Acadêmicos</h4>
@@ -82,7 +80,7 @@ require '../interface/html.class.php';
                 </div>
             </div>
             <?php
-            $rodape = new tela ();
+            $rodape = new html ();
             $rodape->rodape();
             ?>
         </div>

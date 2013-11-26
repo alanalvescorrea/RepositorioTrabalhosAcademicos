@@ -1,6 +1,6 @@
 <?php
 require 'interface/html.class.php';
-include 'tela/tela.php';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,7 @@ include 'tela/tela.php';
 
 
                     <legend>Acesso ao sistema</legend>
-                    <form method="POST" action="negocio/validacao.php"
+                    <form method="POST" action="validacao.php"
                           accept-charset="UTF-8">
 
                         <div class="input-prepend">

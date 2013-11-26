@@ -43,10 +43,5 @@ require 'interface/html.class.php';
             </div>
         </div>
         <!-- Fim Conteúdo-->
-
-
-
-
-
     </body>	
 </html>

@@ -1,6 +1,6 @@
 <?php
-include '../negocio/seguranca.php';
-include '../tela/tela.php';
+require '../negocio/seguranca.php';
+require '../tela/tela.php';
 ?>
 
 
@@ -30,11 +30,11 @@ include '../tela/tela.php';
                 <!-- COLUNA OCUPANDO 10 ESPAÃ‡OS NO GRID -->
                 <br><br><br>
                 <div class="span10">
-                    <?php echo 'Olá ' . $_SESSION['UsuarioNome'] . '!'; ?> 
+                    <?php echo 'Olï¿½ ' . $_SESSION['UsuarioNome'] . '!'; ?> 
                     <?php echo "<a href='../negocio/logout.php'>Sair do sistema</a>"; ?>
 
                     <hr />  
-                    <legend class="breadcrumb">Editar Trabalhos Acadêmicos Cadastrados</legend>
+                    <legend class="breadcrumb">Editar Trabalhos Acadï¿½micos Cadastrados</legend>
 
                     <?php
                     $id = $_GET['id']; // Recebendo o valor vindo do link
@@ -52,7 +52,7 @@ include '../tela/tela.php';
 
                             <!-- editar titulo -->
                             <div class="control-group">
-                                <label class="control-label"  for="titulo">Título do trabalho:</label>
+                                <label class="control-label"  for="titulo">Tï¿½tulo do trabalho:</label>
                                 <div class="controls">
                                     <input type="text" name="titulo" value="<?php echo $linha['titulo']; ?>" class="input-xxlarge"/> <br /><!â€“ mostrando dentro do form o valor do campo nome â€“>
                                 </div>
@@ -86,7 +86,7 @@ include '../tela/tela.php';
 
                                     <!-- editar numero de pÃ¡ginas -->
                                     <div class="control-group">
-                                        <label class="control-label"  for="numero_paginas">Número de Páginas:</label>
+                                        <label class="control-label"  for="numero_paginas">Nï¿½mero de Pï¿½ginas:</label>
                                         <div class="controls">
                                             <input type="text" name="numero_paginas" value="<?php echo $linha['numero_paginas']; ?>" class="input-mini"/> <br /><br />
                                         </div>
@@ -94,7 +94,7 @@ include '../tela/tela.php';
 
                                         <!-- editar data apresentaÃ§Ã£o -->
                                         <div class="control-group">
-                                            <label class="control-label"  for="data">Data Apresentação:</label>
+                                            <label class="control-label"  for="data">Data Apresentaï¿½ï¿½o:</label>
                                             <div class="controls">
                                                 <input type="text" name="data" value="<?php echo $linha['data']; ?>" /> <br /><br />
                                             </div>
@@ -118,7 +118,7 @@ include '../tela/tela.php';
 
                                                     <!-- editar area -->
                                                     <div class="control-group">
-                                                        <label class="control-label"  for="area">Área do Conhecimento:</label>
+                                                        <label class="control-label"  for="area">ï¿½rea do Conhecimento:</label>
                                                         <div class="controls">
                                                             <input type="text" name="area" value="<?php echo $linha['area']; ?>" /> <br />    <br />                     
                                                         </div>
@@ -134,7 +134,7 @@ include '../tela/tela.php';
 
                                                             <!-- editar instituiÃ§Ã£o -->
                                                             <div class="control-group">
-                                                                <label class="control-label"  for="instituicao">Instituição:</label>
+                                                                <label class="control-label"  for="instituicao">Instituiï¿½ï¿½o:</label>
                                                                 <div class="controls">
                                                                     <input type="text" name="instituicao" value="<?php echo $linha['instituicao']; ?>" class="input-xxlarge"/> <br /><br />
                                                                 </div>
@@ -160,7 +160,7 @@ include '../tela/tela.php';
                                                                         <div class="control-group">
                                                                             <!-- botÃ£o de acesso -->
                                                                             <div class="controls">
-                                                                                <button class="btn btn-success">Atualizar Informações</button>
+                                                                                <button class="btn btn-success">Atualizar Informaï¿½ï¿½es</button>
 
                                                                             </div>
                                                                         </div>
