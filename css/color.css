@@ -1,0 +1,84 @@
+/* Blue Color - 00BFFF, 01aae3, 239fc9, 26b0de, 18afe2 */
+
+.header{
+	background:#00BFFF;
+	border-bottom:1px solid #01aae3;
+}
+
+.mattblackmenu ul {
+	background: #00Bfff;
+}
+
+.mattblackmenu li a{
+	background:#26b0de;
+	border-top:2px solid #239fc9;
+	border-bottom:2px solid #239fc9;
+}
+
+.mattblackmenu li a:hover{
+	background:#239fc9;
+}
+
+.mattblackmenu a.selected {
+	background: #239fc9;
+}
+
+.ddsubmenustyle{
+	border-left:1px solid #239fc9;
+	border-right:1px solid #239fc9;
+	border-top:1px solid #239fc9;	
+}
+
+.ddsubmenustyle li a {
+	background:#18afe2 !important;
+	border-bottom:1px solid #239fc9;
+}
+
+.ddsubmenustyle li a:hover {
+	background: #239fc9 !important;
+}
+
+.my_carousel .carousel_nav a{
+	background:#00BFFF;
+}
+
+.my_carousel li .carousel_caption{
+	background:#00BFFF;
+}
+
+.footer {
+	border-top:3px solid #00BFFF;
+}
+
+.main .tblue{
+	color:#00BFFF;
+}
+
+.about .asocial i{
+background:#00BFFF;
+}
+
+.sidebar .widget i.icon-envelope{
+	color:#00Bfff;
+}
+
+.sidebar .widget i.icon-user{
+	color:#00Bfff;
+}
+
+#portfolio .pcap{
+	border-bottom:3px solid #00BFFF;
+}
+
+.main .ser-item i{
+	color:#00BFFF;
+}
+
+.blog .posts .post-meta{
+	background:#00BFFF;
+}
+
+
+
+
+

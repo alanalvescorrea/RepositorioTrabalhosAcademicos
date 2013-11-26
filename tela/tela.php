@@ -1,49 +1,59 @@
 <?php
+
 class tela {
-	/* RODAPE************************************************** */
-	function rodape() {
-		echo "CopyLeft 2013";
-	}
-	
-	/* HEADER************************************************** */
-	function header() {
-		$logo = '<br><img src="../img/logoSistema.png" alt="Tim Berners-Lee" align="right"/>';
-		
-		echo '<div class="row-fluid">
+    /* RODAPE************************************************** */
+
+    function rodape() {
+        ?>
+        <div class="well well-small">
+            CopyLeft 2013 | Projeto Polosap
+        </div>
+
+        <?php
+    }
+
+    /* HEADER************************************************** */
+
+    function header() {
+        $logo = '<br><img src="../img/logoSistema.png" alt="Tim Berners-Lee" align="right"/>';
+
+        echo '<div class="row-fluid">
                  <div class="span12">
                      <div class="navbar">
                          <div class="navbar-inner">
                              <div class="container">
         		' . $logo . '
-                                <h2>Repositório Trabalhos Acadêmicos</h2>
+                                <h2>RepositÃ³rio Trabalhos AcadÃªmicos</h2>
                              </div>
                         </div>
                     </div>
                 </div>
             </div>';
-	}
-	
-	/* TITULO************************************************** */
-	function titulo() {
-		echo '<title>Ptolomeu</title>';
-	}
-	
-	/* MENU ESQUERDO************************************************** */
-	function menu_esquerdo() {
-		include '../negocio/seguranca.php';
-		$tipoUsuario = $_SESSION ['UsuarioNivel'];
-		
-		if ($_SESSION ['UsuarioNivel'] == 2) {
-			$menuRestrito = '<li>
+    }
+
+    /* TITULO************************************************** */
+
+    function titulo() {
+        echo '<title>Ptolomeu</title>';
+    }
+
+    /* MENU ESQUERDO************************************************** */
+
+    function menu_esquerdo() {
+        include '../negocio/seguranca.php';
+        $tipoUsuario = $_SESSION ['UsuarioNivel'];
+
+        if ($_SESSION ['UsuarioNivel'] == 2) {
+            $menuRestrito = '<li>
         		
                         <a href="usuario_cadastrar.php">
                             <i class="icon-plus"></i>
-                                Cadastrar usuário
+                                Cadastrar usuÃ¡rio
                         </a>
                     </li>      ';
-		}
-		
-		echo '
+        }
+
+        echo '
         <div class="span2">
              <h2> Menu </h2>
                 <ul class="nav nav-tabs nav-stacked">
@@ -75,13 +85,13 @@ class tela {
                     <li>
                         <a href="instituicao_cadastrar.php">
                             <i class="icon-certificate"></i>
-                                Cadastrar instituição
+                                Cadastrar instituiÃ§Ã£o
                         </a>
                     </li>
                     <li>
                         <a href="trabalho_listar.php">
                             <i class="icon-list-alt"></i>
-                                Listar trabalhos cadastrados
+                                Listar Trabalhos
                         </a>
                     </li>
                     <li>
@@ -93,7 +103,7 @@ class tela {
                     <li>
                         <a href="../interface_usuario.php">
                             <i class="icon-globe"></i>
-                                Visualizar página web
+                                Web
                         </a>
                     </li>
 
@@ -103,12 +113,13 @@ class tela {
                                           			
             </ul>
         </div>';
-	}
-	function quem_somos() {
-		echo '<center>';
-		echo 'Sistema de Controle de Trabalhos Academicos';
-		echo '</center>';
-	}
-}
+    }
 
+    function quem_somos() {
+        echo '<center>';
+        echo 'Sistema de Controle de Trabalhos Academicos';
+        echo '</center>';
+    }
+
+}
 ?>
