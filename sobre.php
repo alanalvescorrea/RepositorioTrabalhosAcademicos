@@ -46,7 +46,8 @@ require 'interface/html.class.php';
                             <p align="justify"> Esse empreendimento ainda permite que qualquer usuário conectado à Internet,
                                 sem necessariamente possuir uma conta de usuário, busque, leia e faça o download dos trabalhos previamente cadastrados.
                             </p>
-                            <br> <p> <p align="justify">
+                            <br> 
+                           <p align="justify"> </p> 
                         </div>
                     </div>
                 </div>
