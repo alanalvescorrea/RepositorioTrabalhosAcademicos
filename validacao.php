@@ -1,5 +1,6 @@
 <?php
 require 'interface/html.class.php';
+require 'persistencia/classe_conexao.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,6 @@ require 'interface/html.class.php';
         $carregaClasseHtml->includes();
         $carregaClasseHtml->carregarJavascrip();
         ?>
-
     </head>
 
     <body>
@@ -26,7 +26,7 @@ require 'interface/html.class.php';
             exit;
         }
 
-        include ('persistencia/classe_conexao.php');
+
         $novaConexao = new conexao();
         $novaConexao->conecta();
 

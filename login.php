@@ -1,6 +1,5 @@
 <?php
 require 'interface/html.class.php';
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,8 +25,6 @@ require 'interface/html.class.php';
         <div class="container">
             <div class="row">
                 <div class="span4 offset4 well">
-
-
                     <legend>Acesso ao sistema</legend>
                     <form method="POST" action="validacao.php"
                           accept-charset="UTF-8">
@@ -42,15 +39,9 @@ require 'interface/html.class.php';
                                 type="password" id="senhatxtSenha" name="senha"
                                 placeholder="senha">
                         </div>
-
-
-
                         <label class="checkbox"> </label>
                         <button type="submit" name="submit" class="btn btn-info btn">Entrar</button>
                     </form>
-                    <strong>Controle de Produções Acadêmicas</strong><br>
-
-
                 </div>
 
             </div>

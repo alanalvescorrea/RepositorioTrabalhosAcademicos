@@ -7,7 +7,6 @@ require 'interface/html.class.php';
     <head>
         <?php
         $carregaClasseHtml = new html();
-
         $carregaClasseHtml->unicode();
         $carregaClasseHtml->titulo();
         $carregaClasseHtml->metaTag();
@@ -15,7 +14,6 @@ require 'interface/html.class.php';
         $carregaClasseHtml->includes();
         $carregaClasseHtml->carregarJavascrip();
         ?>
-
     </head>
 
     <body>

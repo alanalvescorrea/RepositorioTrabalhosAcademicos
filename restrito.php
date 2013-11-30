@@ -52,6 +52,7 @@ require 'interface/html.class.php';
                         <a href="../trabalhoAcadêmico/" class="btn btn-primary">
                             <i class="icon-trash icon-white"></i><span><strong>Excluir</strong></span>        	
                         </a>
+                        <br><br>
                         <?php
                         if ($_SESSION ['UsuarioNivel'] == 2) {
                             $menuRestrito =
@@ -84,9 +85,7 @@ require 'interface/html.class.php';
             $rodape->rodape();
             ?>
         </div>
-
     </div>
-
 </body>
 </html>
 
