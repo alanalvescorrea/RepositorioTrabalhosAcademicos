@@ -87,8 +87,8 @@ class html {
                             <div id="ddtopmenubar" class="mattblackmenu">
                                 <ul>
                                     <li><a href="index.php">Home</a></li>
-                                    <li><a href="service.html">Sobre o sistema</a></li>
-                                    <li><a href="about.html">Buscar trabalhos</a></li>
+                                    <li><a href="sobre.php">Sobre o sistema</a></li>
+                                    <li><a href="webBuscador.php">Buscar trabalhos</a></li>
                                     <li><a href="login.php">Login</a>
                                     </li>
                                 </ul>
