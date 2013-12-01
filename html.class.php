@@ -38,7 +38,7 @@ class html {
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- TWITTER BOOTSTRAP JS -->
-        <script src="/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <!-- Bootstrap CSS -->
 
         <!-- DropDownPlugin -->
@@ -52,13 +52,15 @@ class html {
         <!-- prettyPhoto -->
         <link href="css/prettyPhoto.css" rel="stylesheet">
         <!-- Font awesome CSS -->
-        <link href="css/font-awesome.min.css" rel="stylesheet">		
+        <link href="css/font-awesome.min.css" rel="stylesheet">                
         <!-- Custom CSS -->
         <link href="css/style.css" rel="stylesheet">
         <!-- Color CSS -->
         <link href="css/color.css" rel="stylesheet">
         <!-- Favicon -->
         <link rel="shortcut icon" href="#">
+
+        
 
         <?php
     }
@@ -227,4 +229,3 @@ class html {
 
 }
 ?>
-

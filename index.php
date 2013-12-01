@@ -1,11 +1,10 @@
-<?php
-require 'interface/html.class.php';
-?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <?php
+        require 'html.class.php';
+
         $carregaClasseHtml = new html();
         $carregaClasseHtml->unicode();
         $carregaClasseHtml->titulo();

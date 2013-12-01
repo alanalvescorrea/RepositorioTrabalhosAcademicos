@@ -1,5 +1,5 @@
 <?php
-require 'interface/html.class.php';
+require 'html.class.php';
 ?>
 <!DOCTYPE html>
 <html>

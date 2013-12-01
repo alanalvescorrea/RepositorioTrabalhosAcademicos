@@ -1,6 +1,6 @@
 <?php
 include 'seguranca.php';
-require 'interface/html.class.php';
+require 'html.class.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,7 +40,7 @@ require 'interface/html.class.php';
 
                     <div class="span10">
                         <h4>Trabalhos Acadêmicos</h4>
-                        <a href="../trabalhoAcademico/trabalhoAcademicoInterface.php" class="btn btn-primary">
+                        <a href="trabalhoFormulario.php" class="btn btn-primary">
                             <i class="icon-pencil icon-white"></i> <span><strong>Cadastrar</strong></span>
                         </a>
                         <a href="../trabalhoAcadêmico/trabalho_listar.php" class="btn btn-primary"> <i

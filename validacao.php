@@ -1,5 +1,5 @@
 <?php
-require 'interface/html.class.php';
+require 'html.class.php';
 require 'persistencia/classe_conexao.php';
 ?>
 
