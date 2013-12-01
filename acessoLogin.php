@@ -26,7 +26,7 @@ require 'html.class.php';
             <div class="row">
                 <div class="span4 offset4 well">
                     <legend>Acesso ao sistema</legend>
-                    <form method="POST" action="validacao.php"
+                    <form method="POST" action="acessoValidacao.php"
                           accept-charset="UTF-8">
 
                         <div class="input-prepend">

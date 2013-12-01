@@ -1,5 +1,5 @@
 <?php
-require 'seguranca.php';
+require 'acessoSeguranca.php';
 require 'html.class.php';
 ?>
 <!DOCTYPE html>
@@ -170,7 +170,7 @@ require 'html.class.php';
                                         <?php /* include 'upload.php'; ?>
                                           <?php echo '<a href="upload.php" target="_blank"> </a>'; */ ?>  
                                         -->
-                                        <a href="#" onclick="window.open('upload.php', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=770, HEIGHT=400');">Selecionar aquivo</a>
+                                        <a href="trabalhoUpload.php" onclick="window.open('trabalhoUpload.php', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=770, HEIGHT=400');">Selecionar aquivo</a>
 
                                     </div>
                                 </div>

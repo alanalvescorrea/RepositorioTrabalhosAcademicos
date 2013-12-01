@@ -1,5 +1,5 @@
 <?php
-include 'seguranca.php';
+include 'acessoSeguranca.php';
 require 'interface/html.class.php';
 ?>
 <!DOCTYPE html>

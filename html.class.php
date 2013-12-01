@@ -91,7 +91,7 @@ class html {
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="sobre.php">Sobre o sistema</a></li>
                                     <li><a href="webBuscador.php">Buscar trabalhos</a></li>
-                                    <li><a href="login.php">Login</a>
+                                    <li><a href="acessoLogin.php">Login</a>
                                     </li>
                                 </ul>
                             </div>
@@ -128,7 +128,7 @@ class html {
 
 
                 <li>
-                    <a href="restrito.php">
+                    <a href="acessoRestrito.php">
                         <i class="icon-lock"></i>
                         Gerência do sistema
                     </a>
@@ -148,7 +148,7 @@ class html {
                     </a>   
                 </li> 
                 <li>
-                    <a href="logout.php">
+                    <a href="acessoLogout.php">
                         <i class="icon-home"></i>
                         Login outra conta
                     </a>   
@@ -190,7 +190,7 @@ class html {
             <div class="alert-message warning">
                 <a class="close" href="#"></a>
                 <strong>
-                    <a href="login.php" class="alert-link">Sabemos que isso é chato, mas os dados informados estão incorretos. Tente novamente :( </a>
+                    <a href="acessoLogin.php" class="alert-link">Sabemos que isso é chato, mas os dados informados estão incorretos. Tente novamente :( </a>
                 </strong>
 
             </div>

@@ -22,7 +22,7 @@ require 'persistencia/classe_conexao.php';
         <?php
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
         if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-            header("Location: login.php");
+            header("Location: acessoLogin.php");
             exit;
         }
 
@@ -54,7 +54,7 @@ require 'persistencia/classe_conexao.php';
             $_SESSION['UsuarioNivel'] = $resultado['nivel'];
 
             // Redireciona o visitante
-            header("Location: restrito.php");
+            header("Location: acessoRestrito.php");
             exit;
         }
         ?>
