@@ -14,6 +14,20 @@ require 'html.class.php';
         $carregaClasseHtml->includes();
         $carregaClasseHtml->carregarJavascrip();
         ?>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".data").datepicker({
+                    dateFormat: 'dd/mm/yy',
+                    dayNames: ['Domingo', 'Segunda', 'TerÃ§a', 'Quarta', 'Quinta', 'Sexta', 'SÃ¡bado', 'Domingo'],
+                    dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+                    dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'SÃ¡b', 'Dom'],
+                    monthNames: ['Janeiro', 'Fevereiro', 'MarÃ§o', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    nextText: 'PrÃ³ximo',
+                    prevText: 'Anterior'
+                });
+            });
+        </script>
     </head>
 
     <body>
@@ -52,7 +66,7 @@ require 'html.class.php';
                                 <div class="control-group">
                                     <label class="control-label"  for="titulo">Título do trabalho</label>
                                     <div class="controls">
-                                        <input type="text" id="titulo" name="titulo" placeholder="" class="input-xlarge" required="">
+                                        <input type="text" id="titulo" name="titulo" placeholder="" class="input-xxlarge" required="">
                                     </div>
                                 </div>
                                 <!-- autor -->
@@ -74,9 +88,9 @@ require 'html.class.php';
                                 <!-- fim orientador -->
                                 <!-- data -->
                                 <div class="control-group">
-
-                                    <label class="control-label"  for="data">Data Apresentação  </label>
+                                    <label class="control-label" for="data">Data Apresentação  </label>
                                     <div class="controls">
+                                        <input type="text" id="data" name="data"class="data" class="input-mini"/>
                                     </div>
                                 </div>
                                 <!-- fim data -->
@@ -123,7 +137,7 @@ require 'html.class.php';
 
                                     <label class="control-label"  for="num_pag">Número de Páginas</label>
                                     <div class="controls">
-                                        <input type="text" id="num_pag" name="numero_paginas" placeholder="" class="input-small" required="">
+                                        <input type="text" id="num_pag" name="numero_paginas" placeholder="" class="input-mini" required="">
                                     </div>
                                 </div>
 
@@ -134,6 +148,8 @@ require 'html.class.php';
                                 <div class="control-group">
                                     <label class="control-label"  for="area">Área</label>
                                     <div class="controls">
+                                        <?php require 'areaFormulario.php'; ?>
+
                                     </div>
                                 </div>
 
@@ -141,6 +157,7 @@ require 'html.class.php';
                                 <div class="control-group">
                                     <label class="control-label"  for="aluno">Instituição</label>
                                     <div class="controls">
+                                        <?php require 'instituicaoFomulario.php'; ?>
 
                                     </div>
                                 </div>
