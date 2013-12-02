@@ -82,8 +82,8 @@ require 'html.class.php';
                                     <label class="control-label"  for="aluno">Orientador</label>
                                     <div class="controls">
                                         <?php require 'orientadorFormulario.php'; ?>
-
                                     </div>
+
                                 </div>
                                 <!-- fim orientador -->
                                 <!-- data -->
@@ -119,7 +119,7 @@ require 'html.class.php';
                                 <div class="control-group">
                                     <label class="control-label"  for="palavras_chave">Palavras-Cahave</label>
                                     <div class="controls">
-                                        <input type="text" id="palavra_chave" name="palavras_chave" class="input-xlarge" required="">
+                                        <input type="text" id="palavra_chave" name="palavras_chave" class="input-xxlarge" required="">
                                     </div>
                                 </div>
                                 <!-- fim palavras chaves -->
@@ -164,14 +164,12 @@ require 'html.class.php';
 
                                 <!-- orientador -->
                                 <div class="control-group">
-                                    <label class="control-label"  for="aluno">Enviar arquivo</label>
+                                    <label class="control-label"  for="aluno">Selecionar arquivo</label>
                                     <div class="controls">
-                                        <!--
-                                        <?php /* include 'upload.php'; ?>
-                                          <?php echo '<a href="upload.php" target="_blank"> </a>'; */ ?>  
-                                        -->
-                                        <a href="trabalhoUpload.php" onclick="window.open('trabalhoUpload.php', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=770, HEIGHT=400');">Selecionar aquivo</a>
 
+                                        <?php // include 'upload.php'; ?>
+                                        <?php echo '<a href="trabalhoUpload.php" target="_blank">Enviar arquivo </a>'; ?>  
+                                        
                                     </div>
                                 </div>
 
@@ -179,7 +177,7 @@ require 'html.class.php';
                                 <div class="control-group">
                                     <label class="control-label"  for="local_pdf">Local PDF</label>
                                     <div class="controls">
-                                        <input type="text" id="local_pdf" name="local_pdf" class="input-xlarge" required="">
+                                        <input type="text" id="local_pdf" name="local_pdf" class="input-xxlarge" required="">
                                     </div>
                                 </div>
                                 <!-- fim local pdf -->

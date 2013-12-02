@@ -198,6 +198,40 @@ class html {
 
         <?php
     }
+    
+    
+    function menssagemSucessoTrabalhoGravado() {
+        ?>
+        <link href="css/alert.css" rel="stylesheet" type="text/css" />
+        <div class="alerts">
+            <div class="alert-success">
+                <a class="close" href="#"></a>
+                <strong>
+                    <a href="trabalhoFormulario.php" class="alert-link">Ótimo! trabalho gravado com sucesso :) </a>
+                </strong>
+
+            </div>
+        </div>
+
+        <?php
+    }
+    
+    function menssagemErroTrabalhoGravado() {
+        ?>
+        <link href="css/alert.css" rel="stylesheet" type="text/css" />
+        <div class="alerts">
+            <div class="alert-error">
+                <a class="close" href="#"></a>
+                <strong>
+                    <a href="trabalhoForulario.php" class="alert-link">Ops! trabalho não gravado :) </a>
+                </strong>
+
+            </div>
+        </div>
+
+        <?php
+    }
+    
 
     function carregarJavascrip() {
         ?>

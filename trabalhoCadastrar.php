@@ -28,8 +28,9 @@ $instituicao = $_POST['instituicao'];
 $orientador = $_POST['orientador'];
 $ativo = 1;
 
-include ('../persistencia/classe_conexao.php');
-include 'classe_mensagens_formularios.php';
+require 'persistencia/classe_conexao.php';
+require 'html.class.php';
+
 $novaConexao = new conexao();
 $novaConexao->conecta();
 
@@ -37,11 +38,11 @@ $query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo`, `tipo` , `res
 VALUES ('$titulo', '$tipo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area','$aluno','$instituicao','$orientador',$ativo)");
 
 if ($query) {
-    $mensagemSucesso = new mensagens_form();
-    $mensagemSucesso->sucesso();
+    $mensagemSucesso = new html();
+    $mensagemSucesso->menssagemSucessoTrabalhoGravado();
 } else {
 
-    $mensagemErro = new mensagens_form();
-    $mensagemErro->erro();
+    $mensagemErro = new html();
+    $mensagemErro->menssagemErroTrabalhoGravado();
 }
 ?>
