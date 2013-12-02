@@ -20,6 +20,6 @@
     </head>
 
     <body>
-        <p><input type="text" id="instituicao" class="input-xxlarge"/></p>
+        <p><input type="text" name='instituicao'id="instituicao" class="input-xxlarge"/></p>
     </body>
 </html>

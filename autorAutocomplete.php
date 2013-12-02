@@ -3,7 +3,7 @@
 $mysqli = new mysqli('localhost', 'root', '', 'repositoriotrabalhosacademicos_db');
 $text = $mysqli->real_escape_string($_GET['term']);
 
-$query = "SELECT aluno FROM trabalho_academico WHERE aluno LIKE '%$text%' ORDER BY aluno ASC";
+$query = "SELECT autor FROM trabalho_academico WHERE autor LIKE '%$text%' ORDER BY autor ASC";
 $result = $mysqli->query($query);
 $json = '[';
 $first = true;
@@ -13,7 +13,7 @@ while ($row = $result->fetch_assoc()) {
     } else {
         $first = false;
     }
-    $json .= '{"value":"' . $row['aluno'] . '"}';
+    $json .= '{"value":"' . $row['autor'] . '"}';
 }
 $json .= ']';
 echo $json;

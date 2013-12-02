@@ -15,6 +15,8 @@ if (!empty($_POST) AND
 }
 
 $titulo = $_POST['titulo'];
+$autor = $_POST['autor'];
+
 $tipo = $_POST['tipo'];
 $resumo = $_POST['resumo'];
 $abstract = $_POST['abstract'];
@@ -23,7 +25,7 @@ $data = $_POST['data'];
 $local_pdf = $_POST['local_pdf'];
 $palavras_chave = $_POST['palavras_chave'];
 $area = $_POST['area'];
-$aluno = $_POST['aluno'];
+
 $instituicao = $_POST['instituicao'];
 $orientador = $_POST['orientador'];
 $ativo = 1;
@@ -34,8 +36,8 @@ require 'html.class.php';
 $novaConexao = new conexao();
 $novaConexao->conecta();
 
-$query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo`, `tipo` , `resumo` , `abstract` , `numero_paginas` , `data` , `local_pdf` , `palavras_chave` , `area`,`aluno`,`instituicao`,`orientador`,`ativo`)  
-VALUES ('$titulo', '$tipo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area','$aluno','$instituicao','$orientador',$ativo)");
+$query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo`, `tipo` , `resumo` , `abstract` , `numero_paginas` , `data` , `local_pdf` , `palavras_chave` , `area`,`autor`,`instituicao`,`orientador`,`ativo`)  
+VALUES ('$titulo', '$tipo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area','$autor','$instituicao','$orientador',$ativo)");
 
 if ($query) {
     $mensagemSucesso = new html();

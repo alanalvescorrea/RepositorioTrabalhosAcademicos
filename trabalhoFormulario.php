@@ -62,16 +62,16 @@ require 'html.class.php';
                                     <legend class="breadcrumb">Cadastrar trabalho Acadêmico</legend>
                                 </div>
 
-                                <!-- titulo -->
+                                <!-- titulo --------------------------------------------------->
                                 <div class="control-group">
-                                    <label class="control-label"  for="titulo">Título do trabalho</label>
+                                    <label class="control-label" for="titulo">Título do trabalho</label>
                                     <div class="controls">
                                         <input type="text" id="titulo" name="titulo" placeholder="" class="input-xxlarge" required="">
                                     </div>
                                 </div>
-                                <!-- autor -->
+                                <!-- autor ----------------------------------------------------->
                                 <div class="control-group">
-                                    <label class="control-label"  for="aluno">Autor</label>
+                                    <label class="control-label" for="aluno">Autor</label>
                                     <div class="controls">
                                         <?php require 'autorFormulario.php'; ?>
                                     </div>

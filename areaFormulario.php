@@ -20,6 +20,6 @@
     </head>
 
     <body>
-        <p><input type="text" id="area" class="input-xxlarge"/></p>
+        <p><input type="text" name='area' id="area" class="input-xxlarge"/></p>
     </body>
 </html>
