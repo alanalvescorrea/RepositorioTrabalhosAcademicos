@@ -43,10 +43,10 @@ require 'html.class.php';
                         <a href="trabalhoFormulario.php" class="btn btn-primary">
                             <i class="icon-pencil icon-white"></i> <span><strong>Cadastrar</strong></span>
                         </a>
-                        <a href="../trabalhoAcadêmico/trabalho_listar.php" class="btn btn-primary"> <i
+                        <a href="trabalhoConsultar.php" class="btn btn-primary"> <i
                                 class="icon-eye-open icon-white"></i> <span><strong>Consultar</strong></span>
                         </a>
-                        <a href="../trabalhoAcadêmico/listar_trabalho.php" class="btn btn-primary"> <i
+                        <a href="trabalhoAlterarFormulario.php" class="btn btn-primary"> <i
                                 class="icon-edit icon-white"></i> <span><strong>Editar</strong></span>
                         </a>
                         <a href="../trabalhoAcadêmico/" class="btn btn-primary">

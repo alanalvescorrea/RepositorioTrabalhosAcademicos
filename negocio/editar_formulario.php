@@ -1,6 +1,6 @@
 <?php
-require '../negocio/seguranca.php';
-require '../tela/tela.php';
+//require '../negocio/seguranca.php';
+//require '../html.class.php';
 ?>
 
 
@@ -13,20 +13,20 @@ require '../tela/tela.php';
         <script src="http://www.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php
-        $header = new tela();
+        <?php/*
+        $header = new html();
         $header->header();
-        ?>
+        */?>
 
         <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
         <div class="container-fluid">
             <!-- CLASSE PARA DEFINIR UMA LINHA -->
             <div class="row-fluid">
                 <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php
-                $menuEsquerdo = new tela();
+                <?php/*
+                $menuEsquerdo = new html();
                 $menuEsquerdo->menu_esquerdo();
-                ?>
+                */?>
                 <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
                 <br><br><br>
                 <div class="span10">
