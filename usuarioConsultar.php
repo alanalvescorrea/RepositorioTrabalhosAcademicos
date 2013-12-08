@@ -16,10 +16,10 @@ require 'html.class.php';
         include ('persistencia/classe_conexao.php');
         $novaConexao = new conexao ();
         $novaConexao->conecta();
-        $qry = mysql_query("select titulo,autor,orientador from trabalho_academico ORDER BY titulo");
+        $qry = mysql_query("select nome, usuario, email, nivel, ativo from usuarios ORDER BY nome");
 
 // Pegando quantidade de registros
-        $sql = "SELECT * FROM trabalho_academico";
+        $sql = "SELECT * FROM usuarios";
         $res = mysql_query($sql);
         $rows = mysql_num_rows($res);
 
@@ -78,9 +78,8 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        
-                        <legend class="breadcrumb">Consultar trabalhos acadêmicos cadastrados</legend>
-                        Quantidade de trabalhos cadastrados: 
+                        <legend class="breadcrumb">Consultar usuários cadastrados</legend>
+                        Quantidade de usuários cadastrados: 
                         <?php echo("$rows"); ?>
                         <?php echo $table; ?>
                     </div>

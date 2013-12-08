@@ -168,9 +168,9 @@ class html {
     }
 
     function informarSessao() {
-        echo 'Olá ' . $_SESSION['UsuarioNome'] . '! <br>Nível Acesso:' . $_SESSION['UsuarioNivel'];
+        echo 'Olá ' . $_SESSION['UsuarioNome'] . '! (usuário nível: ' . $_SESSION['UsuarioNivel'].')';
 
-        echo "<br><a href='index.php'>Sair do sistema</a>";
+        echo "<a href='index.php'> Sair do sistema</a>";
         ?>
         <hr />
         <?php

@@ -58,10 +58,10 @@ require 'html.class.php';
                             $menuRestrito =
                                     '<h4><br>Gerência de Usuários</h4>
                                               
-                                               <a href="../negocio/trabalho_cadastrar.php" class="btn btn-primary">
+                                               <a href="usuarioFormulario.php" class="btn btn-primary">
                                                  <i class="icon-pencil icon-white"></i> <span><strong>Cadastrar</strong></span>
                                                </a>
-                                               <a href="trabalho_listar.php" class="btn btn-primary"> <i
+                                               <a href="usuarioConsultar.php" class="btn btn-primary"> <i
                                                  class="icon-eye-open icon-white"></i> <span><strong>Consultar</strong></span>
                                                </a>
                                                <a href="listar_trabalho.php" class="btn btn-primary"> <i

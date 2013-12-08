@@ -48,7 +48,7 @@ require 'html.class.php';
                         <?php
                         $id = $_POST['id']; // Recebendo o valor id do formulário
                         $titulo = $_POST['titulo']; // Recebendo o valor nome do formulário
-                        $aluno = $_POST['autor']; // Recebendo o valor email do formulário
+                        $autor = $_POST['autor']; // Recebendo o valor email do formulário
                         $tipo = $_POST['tipo']; // Recebendo o valor email do formulário
                         $resumo = $_POST['resumo']; // Recebendo o valor email do formulário
                         $abstract = $_POST['abstract']; // Recebendo o valor email do formulário
@@ -66,7 +66,7 @@ require 'html.class.php';
                         $novaConexao = new conexao();
                         $novaConexao->conecta();
 
-                        mysql_query("UPDATE trabalho_academico SET titulo='" . $titulo . "', data='" . $data . "', abstract='" . $abstract . "',resumo='" . $resumo . "',orientador='" . $orientador . "',instituicao='" . $instituicao . "',palavras_chave='" . $palavras_chave . "',local_pdf='" . $local_pdf . "',ativo='" . $ativo . "', numero_paginas='" . $numero_paginas . "',area='" . $area . "',tipo='" . $tipo . "',aluno = '" . $aluno . "'WHERE id='" . $id . "'");
+                        mysql_query("UPDATE trabalho_academico SET titulo='" . $titulo . "', data='" . $data . "', abstract='" . $abstract . "',resumo='" . $resumo . "',orientador='" . $orientador . "',instituicao='" . $instituicao . "',palavras_chave='" . $palavras_chave . "',local_pdf='" . $local_pdf . "',ativo='" . $ativo . "', numero_paginas='" . $numero_paginas . "',area='" . $area . "',tipo='" . $tipo . "',autor = '" . $autor . "'WHERE id='" . $id . "'");
                         ?>
 
                     </div>

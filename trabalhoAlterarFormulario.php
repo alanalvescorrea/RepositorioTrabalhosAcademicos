@@ -43,12 +43,10 @@ require 'html.class.php';
                         <legend class="breadcrumb">Editar Trabalhos Acadêmicos Cadastrados</legend>
 
                         <?php
-                        @$id = $_GET['id']; // Recebendo o valor vindo do link
-
                         include ('persistencia/classe_conexao.php');
                         $novaConexao = new conexao();
                         $novaConexao->conecta();
-
+                        $id = $_GET['id']; // Recebendo o valor vindo do link
 
                         $resultado = mysql_query("SELECT * FROM trabalho_academico WHERE id = '" . $id . "'"); // Há variável $resultado faz uma consulta em nossa tabela selecionando somente o registro desejado
                         while ($linha = mysql_fetch_array($resultado)) { //Já a instrução while faz um loop entre todos os registros e armazena seus valores na variável $linha
@@ -174,9 +172,9 @@ require 'html.class.php';
 
                                                                             </form>
 
-                                                                            <?php
-                                                                        }
-                                                                        ?> 
+    <?php
+}
+?> 
 
                                                                     </div>
                                                                 </div>
@@ -188,10 +186,10 @@ require 'html.class.php';
 
                                                         </div>
                                                     </div>
-                                                    <?php
-                                                    $rodape = new html ();
-                                                    $rodape->rodape();
-                                                    ?>
+<?php
+$rodape = new html ();
+$rodape->rodape();
+?>
                                                 </div>
                                             </div>
                                             </body>
