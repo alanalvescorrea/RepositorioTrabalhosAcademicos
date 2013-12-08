@@ -49,7 +49,7 @@ require 'html.class.php';
                         <a href="trabalhoAlterarFormulario.php" class="btn btn-primary"> <i
                                 class="icon-edit icon-white"></i> <span><strong>Editar</strong></span>
                         </a>
-                        <a href="../trabalhoAcadêmico/" class="btn btn-primary">
+                        <a href="trabalhoExcluir.php" class="btn btn-primary">
                             <i class="icon-trash icon-white"></i><span><strong>Excluir</strong></span>        	
                         </a>
                         <br><br>
@@ -67,7 +67,7 @@ require 'html.class.php';
                                                <a href="listar_trabalho.php" class="btn btn-primary"> <i
                                                  class="icon-edit icon-white"></i> <span><strong>Editar</strong></span>
                                                </a>
-                                               <a href="#" class="btn btn-primary">
+                                               <a href="usuarioExcluir.php" class="btn btn-primary">
                                                  <i class="icon-trash icon-white"></i>
                                                  <span><strong>Excluir</strong></span>        	
                                                </a>
