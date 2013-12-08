@@ -78,7 +78,7 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        
+
                         <legend class="breadcrumb">Consultar trabalhos acadêmicos cadastrados</legend>
                         Quantidade de trabalhos cadastrados: 
                         <?php echo("$rows"); ?>

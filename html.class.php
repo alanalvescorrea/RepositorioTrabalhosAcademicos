@@ -60,7 +60,7 @@ class html {
         <!-- Favicon -->
         <link rel="shortcut icon" href="#">
 
-        
+
 
         <?php
     }
@@ -130,17 +130,9 @@ class html {
                 <li>
                     <a href="acessoRestrito.php">
                         <i class="icon-lock"></i>
-                        Gerência do sistema
+                        Gerênciar sistema
                     </a>
                 </li>  
-
-
-                <li>
-                    <a href="sobre.php">
-                        <i class="icon-info"></i>
-                        Sobre o sistema
-                    </a>   
-                </li> 
                 <li>
                     <a href="buscadorWeb.php">
                         <i class="icon-search"></i>
@@ -168,7 +160,7 @@ class html {
     }
 
     function informarSessao() {
-        echo 'Olá ' . $_SESSION['UsuarioNome'] . '! (usuário nível: ' . $_SESSION['UsuarioNivel'].')';
+        echo 'Olá ' . $_SESSION['UsuarioNome'] . '! (usuário nível: ' . $_SESSION['UsuarioNivel'] . ')';
 
         echo "<a href='index.php'> Sair do sistema</a>";
         ?>
@@ -198,8 +190,7 @@ class html {
 
         <?php
     }
-    
-    
+
     function menssagemSucessoTrabalhoGravado() {
         ?>
         <link href="css/alert.css" rel="stylesheet" type="text/css" />
@@ -215,7 +206,7 @@ class html {
 
         <?php
     }
-    
+
     function menssagemErroTrabalhoGravado() {
         ?>
         <link href="css/alert.css" rel="stylesheet" type="text/css" />
@@ -231,7 +222,6 @@ class html {
 
         <?php
     }
-    
 
     function carregarJavascrip() {
         ?>

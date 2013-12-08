@@ -43,12 +43,12 @@ require 'html.class.php';
                         <legend class="breadcrumb">Editar Trabalhos Acadêmicos Cadastrados</legend>
 
                         <?php
-                        include ('persistencia/classe_conexao.php');
+                        require 'persistencia/classe_conexao.php';
                         $novaConexao = new conexao();
                         $novaConexao->conecta();
                         $id = $_GET['id']; // Recebendo o valor vindo do link
 
-                        $resultado = mysql_query("SELECT * FROM trabalho_academico WHERE id = '" . $id . "'"); // Há variável $resultado faz uma consulta em nossa tabela selecionando somente o registro desejado
+                        $resultado = mysql_query("SELECT * FROM trabalho_academico WHERE id = " . $id . " "); // Há variável $resultado faz uma consulta em nossa tabela selecionando somente o registro desejado
                         while ($linha = mysql_fetch_array($resultado)) { //Já a instrução while faz um loop entre todos os registros e armazena seus valores na variável $linha
                             ?>
 
@@ -57,142 +57,42 @@ require 'html.class.php';
 
                                 <!-- editar titulo -->
                                 <div class="control-group">
-                                    <label class="control-label"  for="titulo">T�tulo do trabalho:</label>
+                                    <label class="control-label"  for="titulo">Título do trabalho:</label>
                                     <div class="controls">
                                         <input type="text" name="titulo" value="<?php echo $linha['titulo']; ?>" class="input-xxlarge"/> <br /><!– mostrando dentro do form o valor do campo nome –>
                                     </div>
                                 </div>
-                                <!-- fim titulo -->
 
-                                <!-- editar tipo -->
+
                                 <div class="control-group">
-                                    <label class="control-label"  for="tipo">Tipo:</label>
+                                    <!-- botão de acesso -->
                                     <div class="controls">
-                                        <input type="text" name="tipo" value="<?php echo $linha['tipo']; ?>" class="input-medium"/> <br />                                
+                                        <button class="btn btn-success">Atualizar Informações</button>
+
                                     </div>
                                 </div>
-                                <!-- fim tipo -->
 
-                                <!-- editar resumo -->
-                                <div class="control-group">
-                                    <label class="control-label" for="resumo">Resumo:</label>
-                                    <div class="controls">
-                                        <textarea class="field span8" name="resumo" rows="10"><?php echo $linha['resumo']; ?> </textarea><br />     <br />                         
-                                    </div>
-                                    <!-- fim resumo -->
+                            </form>
 
-                                    <!-- editar abstract -->
-                                    <div class="control-group">
-                                        <label class="control-label" for="abstract">Abstract:</label>
-                                        <div class="controls">
-                                            <textarea class="field span8" name="abstract" rows="10"><?php echo $linha['abstract']; ?> </textarea><br />     <br />                         
-                                        </div>
-                                        <!-- fim abstract -->
+                            <?php
+                        }
+                        ?> 
 
-                                        <!-- editar numero de páginas -->
-                                        <div class="control-group">
-                                            <label class="control-label"  for="numero_paginas">N�mero de P�ginas:</label>
-                                            <div class="controls">
-                                                <input type="text" name="numero_paginas" value="<?php echo $linha['numero_paginas']; ?>" class="input-mini"/> <br /><br />
-                                            </div>
-                                            <!-- fim numero de páginas -->
-
-                                            <!-- editar data apresentação -->
-                                            <div class="control-group">
-                                                <label class="control-label"  for="data">Data Apresenta��o:</label>
-                                                <div class="controls">
-                                                    <input type="text" name="data" value="<?php echo $linha['data']; ?>" /> <br /><br />
-                                                </div>
-                                                <!-- fim data apresentação -->
-
-                                                <!-- editar local arquivo -->
-                                                <div class="control-group">
-                                                    <label class="control-label"  for="local_pdf">Local do Arquivo:</label>
-                                                    <div class="controls">
-                                                        <input type="text" name="local_pdf" value="<?php echo $linha['local_pdf']; ?>" class="input-xxlarge"/> <br /><br />
-                                                    </div>
-                                                    <!-- fim local arquivo -->
-
-                                                    <!-- editar palavras-chave -->
-                                                    <div class="control-group">
-                                                        <label class="control-label"  for="palavras_chave">Palavras-Chave:</label>
-                                                        <div class="controls">
-                                                            <input type="text" name="palavras_chave" value="<?php echo $linha['palavras_chave']; ?>" class="input-xxlarge"/> <br /><br />  
-                                                        </div>
-                                                        <!-- fim palavras chave -->
-
-                                                        <!-- editar area -->
-                                                        <div class="control-group">
-                                                            <label class="control-label"  for="area">�rea do Conhecimento:</label>
-                                                            <div class="controls">
-                                                                <input type="text" name="area" value="<?php echo $linha['area']; ?>" /> <br />    <br />                     
-                                                            </div>
-                                                            <!-- fim area -->
-
-                                                            <!-- editar aluno -->
-                                                            <div class="control-group">
-                                                                <label class="control-label"  for="autor">Aluno:</label>
-                                                                <div class="controls">
-                                                                    <input type="text" name="autor" value="<?php echo $linha['autor']; ?>" /> <br /><br />
-                                                                </div>
-                                                                <!-- fim aluno -->
-
-                                                                <!-- editar instituição -->
-                                                                <div class="control-group">
-                                                                    <label class="control-label"  for="instituicao">Institui��o:</label>
-                                                                    <div class="controls">
-                                                                        <input type="text" name="instituicao" value="<?php echo $linha['instituicao']; ?>" class="input-xxlarge"/> <br /><br />
-                                                                    </div>
-                                                                    <!-- fim instituição -->
-
-                                                                    <!-- editar orientador -->
-                                                                    <div class="control-group">
-                                                                        <label class="control-label"  for="orientador">Orientador:</label>
-                                                                        <div class="controls">
-                                                                            <input type="text" name="orientador" value="<?php echo $linha['orientador']; ?>" /> <br /><br />
-                                                                        </div>
-                                                                        <!-- fim orientador -->
+                    </div>
+                </div>
 
 
-                                                                        <!-- editar Ativo -->
-                                                                        <div class="control-group">
-                                                                            <label class="control-label"  for="ativo">Ativo:</label>
-                                                                            <div class="controls">
-                                                                                <input type="text" name="ativo" value="<?php echo $linha['ativo']; ?>" /> <br /><br />
-                                                                            </div>
-                                                                            <!-- fim ativo -->
 
-                                                                            <div class="control-group">
-                                                                                <!-- botão de acesso -->
-                                                                                <div class="controls">
-                                                                                    <button class="btn btn-success">Atualizar Informa��es</button>
+            </div>
+            <br>
 
-                                                                                </div>
-                                                                            </div>
-
-                                                                            </form>
-
+        </div>
+    </div>
     <?php
-}
-?> 
-
-                                                                    </div>
-                                                                </div>
-
-
-
-                                                            </div>
-                                                            <br>
-
-                                                        </div>
-                                                    </div>
-<?php
-$rodape = new html ();
-$rodape->rodape();
-?>
-                                                </div>
-                                            </div>
-                                            </body>
-                                            </html>
+    $rodape = new html ();
+    $rodape->rodape();
+    ?>
+</body>
+</html>
 
 

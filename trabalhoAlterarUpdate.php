@@ -48,25 +48,26 @@ require 'html.class.php';
                         <?php
                         $id = $_POST['id']; // Recebendo o valor id do formulário
                         $titulo = $_POST['titulo']; // Recebendo o valor nome do formulário
-                        $autor = $_POST['autor']; // Recebendo o valor email do formulário
-                        $tipo = $_POST['tipo']; // Recebendo o valor email do formulário
-                        $resumo = $_POST['resumo']; // Recebendo o valor email do formulário
-                        $abstract = $_POST['abstract']; // Recebendo o valor email do formulário
-                        $area = $_POST['area']; // Recebendo o valor email do formulário
-                        $ativo = $_POST['ativo']; // Recebendo o valor email do formulário
-                        $numero_paginas = $_POST['numero_paginas']; // Recebendo o valor email do formulário
-                        $data = $_POST['data']; // Recebendo o valor email do formulário
-                        $local_pdf = $_POST['local_pdf']; // Recebendo o valor email do formulário
-                        $palavras_chave = $_POST['palavras_chave']; // Recebendo o valor email do formulário
-                        $instituicao = $_POST['instituicao']; // Recebendo o valor email do formulário
-                        $orientador = $_POST['orientador']; // Recebendo o valor email do formulário
-
+                        /*  $autor = $_POST['autor']; // Recebendo o valor email do formulário
+                          $tipo = $_POST['tipo']; // Recebendo o valor email do formulário
+                          $resumo = $_POST['resumo']; // Recebendo o valor email do formulário
+                          $abstract = $_POST['abstract']; // Recebendo o valor email do formulário
+                          $area = $_POST['area']; // Recebendo o valor email do formulário
+                          $ativo = $_POST['ativo']; // Recebendo o valor email do formulário
+                          $numero_paginas = $_POST['numero_paginas']; // Recebendo o valor email do formulário
+                          $data = $_POST['data']; // Recebendo o valor email do formulário
+                          $local_pdf = $_POST['local_pdf']; // Recebendo o valor email do formulário
+                          $palavras_chave = $_POST['palavras_chave']; // Recebendo o valor email do formulário
+                          $instituicao = $_POST['instituicao']; // Recebendo o valor email do formulário
+                          $orientador = $_POST['orientador']; // Recebendo o valor email do formulário
+                         */
 
                         include ('persistencia/classe_conexao.php');
                         $novaConexao = new conexao();
                         $novaConexao->conecta();
 
-                        mysql_query("UPDATE trabalho_academico SET titulo='" . $titulo . "', data='" . $data . "', abstract='" . $abstract . "',resumo='" . $resumo . "',orientador='" . $orientador . "',instituicao='" . $instituicao . "',palavras_chave='" . $palavras_chave . "',local_pdf='" . $local_pdf . "',ativo='" . $ativo . "', numero_paginas='" . $numero_paginas . "',area='" . $area . "',tipo='" . $tipo . "',autor = '" . $autor . "'WHERE id='" . $id . "'");
+                        mysql_query("UPDATE trabalho_academico SET titulo='" . $titulo . "'");
+                        //mysql_query("UPDATE trabalho_academico SET titulo='" . $titulo . "', data='" . $data . "', abstract='" . $abstract . "',resumo='" . $resumo . "',orientador='" . $orientador . "',instituicao='" . $instituicao . "',palavras_chave='" . $palavras_chave . "',local_pdf='" . $local_pdf . "',ativo='" . $ativo . "', numero_paginas='" . $numero_paginas . "',area='" . $area . "',tipo='" . $tipo . "',autor = '" . $autor . "'WHERE id='" . $id . "'");
                         ?>
 
                     </div>
