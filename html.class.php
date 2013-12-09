@@ -177,47 +177,35 @@ class html {
 
     function menssagemErroLogin() {
         ?>
-        <link href="css/alert.css" rel="stylesheet" type="text/css" />
-        <div class="alerts">
-            <div class="alert-message warning">
-                <a class="close" href="#"></a>
-                <strong>
-                    <a href="acessoLogin.php" class="alert-link">Sabemos que isso é chato, mas os dados informados estão incorretos. Tente novamente :( </a>
-                </strong>
+        <div class="alert alert-block">
+            <h4>Ops..</h4>
+            Não foi possível realizar o login :(
+            <strong>
+                <a href="acessoLogin.php">Tente novamente.</a>
+            </strong>
+        </div>
+        <?php
+    }
 
-            </div>
+    function menssagemDadosGravadosComSucesso() {
+        ?>
+        <div class="alert alert-success">
+
+            <h4>Ótimo!</h4>
+            Os dados foram gravados com sucesso :)
         </div>
 
         <?php
     }
 
-    function menssagemSucessoTrabalhoGravado() {
+    function menssagemDadosNaoGravados() {
         ?>
-        <link href="css/alert.css" rel="stylesheet" type="text/css" />
-        <div class="alerts">
-            <div class="alert-success">
-                <a class="close" href="#"></a>
-                <strong>
-                    <a href="trabalhoFormulario.php" class="alert-link">Ótimo! trabalho gravado com sucesso :) </a>
-                </strong>
-
-            </div>
-        </div>
-
-        <?php
-    }
-
-    function menssagemErroTrabalhoGravado() {
-        ?>
-        <link href="css/alert.css" rel="stylesheet" type="text/css" />
-        <div class="alerts">
-            <div class="alert-error">
-                <a class="close" href="#"></a>
-                <strong>
-                    <a href="trabalhoForulario.php" class="alert-link">Ops! trabalho não gravado :) </a>
-                </strong>
-
-            </div>
+        <div class="alert alert-block">
+            <h4>Ops..</h4>
+            Não foi possível gravas os dados :(
+            <strong>
+                <a href="trabalhoForulario.php">Tente novamente.</a>
+            </strong>
         </div>
 
         <?php
