@@ -64,7 +64,7 @@ require 'html.class.php';
                                                <a href="usuarioConsultar.php" class="btn btn-primary"> <i
                                                  class="icon-eye-open icon-white"></i> <span><strong>Consultar</strong></span>
                                                </a>
-                                               <a href="listar_trabalho.php" class="btn btn-primary"> <i
+                                               <a href="usuarioEditarListar.php" class="btn btn-primary"> <i
                                                  class="icon-edit icon-white"></i> <span><strong>Editar</strong></span>
                                                </a>
                                                <a href="usuarioExcluir.php" class="btn btn-primary">
