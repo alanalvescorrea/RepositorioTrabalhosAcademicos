@@ -9,7 +9,7 @@ $novaConexao->conecta();
 
 @$busca = $_POST ['palavra']; // palavra que o usuario digitou
 
-$consulta = "SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'"; // faz a busca com as palavras enviadas
+$consulta = "SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'AND ativo='1'order by titulo ASC"; // faz a busca com as palavras enviadas
 $novaConexao->mysql_query($consulta);
 
 if (empty($consulta)) { // Se nao achar nada, lanÃ§a essa mensagem

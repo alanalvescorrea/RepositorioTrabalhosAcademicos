@@ -16,7 +16,7 @@ require 'html.class.php';
         include ('persistencia/classe_conexao.php');
         $novaConexao = new conexao ();
         $novaConexao->conecta();
-        $qry = mysql_query("select titulo,autor,orientador from trabalho_academico ORDER BY titulo");
+        $qry = mysql_query("select titulo,autor,orientador,data,ativo,area,instituicao from trabalho_academico ORDER BY titulo");
 
 // Pegando quantidade de registros
         $sql = "SELECT * FROM trabalho_academico";

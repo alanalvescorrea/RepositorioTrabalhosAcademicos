@@ -134,7 +134,7 @@ class html {
                     </a>
                 </li>  
                 <li>
-                    <a href="buscadorWeb.php">
+                    <a href="webBuscador.php">
                         <i class="icon-search"></i>
                         Buscador Web
                     </a>   

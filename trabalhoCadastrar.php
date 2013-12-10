@@ -41,10 +41,10 @@ VALUES ('$titulo', '$tipo', '$resumo', '$abstract', $numero_paginas, '$data', '$
 
 if ($query) {
     $mensagemSucesso = new html();
-    $mensagemSucesso->menssagemSucessoTrabalhoGravado();
+    $mensagemSucesso->menssagemDadosGravadosComSucesso();
 } else {
 
     $mensagemErro = new html();
-    $mensagemErro->menssagemErroTrabalhoGravado();
+    $mensagemErro->menssagemDadosNaoGravados();
 }
 ?>
