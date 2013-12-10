@@ -39,7 +39,7 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        <h4>Editar trabalhos acadêmicos</h4>
+                        <legend class="breadcrumb">Editar trabalhos acadêmicos cadastrados</legend>
                         <?php
 // Connect to server and select database.
                         mysql_connect("localhost", "root", "") or die("cannot connect");

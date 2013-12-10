@@ -40,7 +40,7 @@ require 'html.class.php';
 
                     <div class="span10">
                         <hr />  
-                        <legend class="breadcrumb">Editar Trabalhos Acadêmicos Cadastrados</legend>
+                        <legend class="breadcrumb">Excluir trabalhos acadêmicos cadastrados</legend>
 
                         <?php
                         require 'persistencia/classe_conexao.php';

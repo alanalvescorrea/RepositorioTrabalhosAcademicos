@@ -1,22 +1,7 @@
 <?php
 
-if (!empty($_POST) AND
-        (empty($_POST['titulo']) OR
-        empty($_POST['resumo']) OR
-        empty($_POST['abstract']) OR
-        empty($_POST['numero_paginas']) OR
-        empty($_POST['data']) OR
-        empty($_POST['local_pdf']) OR
-        empty($_POST['palavras_chave']) OR
-        empty($_POST['area'])
-        )) {
-    header("Location: trabalhoCadastrar.php");
-    exit;
-}
-
 $titulo = $_POST['titulo'];
 $autor = $_POST['autor'];
-
 $tipo = $_POST['tipo'];
 $resumo = $_POST['resumo'];
 $abstract = $_POST['abstract'];
@@ -25,7 +10,6 @@ $data = $_POST['data'];
 $local_pdf = $_POST['local_pdf'];
 $palavras_chave = $_POST['palavras_chave'];
 $area = $_POST['area'];
-
 $instituicao = $_POST['instituicao'];
 $orientador = $_POST['orientador'];
 $ativo = 1;

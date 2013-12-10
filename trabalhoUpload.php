@@ -79,7 +79,7 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        <h4>Upload de arquivo</h4>
+                        <legend class="breadcrumb">Upload de arquivo</legend>
                         <form action="" method="post" enctype="multipart/form-data">
                             <input type="file" name="arquivo" />
                             <input type="submit" name="enviar" value="Enviar" />

@@ -98,7 +98,7 @@ VALUES ('$nome', '$usuario', '$senha', '$email', $nivel, $ativo, '$data', '$hora
                     ?>
 
                     <div class="span10">
-                        <h4>Trabalhos Acadêmicos</h4>
+                        <legend class="breadcrumb">usuário cadastrar</legend>
 
 
                     </div>

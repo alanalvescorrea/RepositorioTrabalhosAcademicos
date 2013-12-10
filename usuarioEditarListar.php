@@ -39,7 +39,7 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        <h4>Editar usuários</h4>
+                        <legend class="breadcrumb">Editar usuários cadastrados</legend>
                         <?php
 // Connect to server and select database.
                         mysql_connect("localhost", "root", "") or die("cannot connect");
