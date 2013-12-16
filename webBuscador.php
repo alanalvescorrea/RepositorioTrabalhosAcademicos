@@ -60,10 +60,7 @@ if (empty($consulta)) { // Se nao achar nada, lanÃ§a essa mensagem
                             </center>
 
                             <?php
-                            if (empty($busca)) {
-                                echo "<center>Por favor, insira um termo para sua pesquisa.</center>";
-                                exit();
-                            }
+                            
 
                             while ($dados = $novaConexao->resultado()) {
                                 $string = $dados [resumo];

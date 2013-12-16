@@ -7,6 +7,7 @@ $resumo = $_POST['resumo'];
 $abstract = $_POST['abstract'];
 $numero_paginas = $_POST['numero_paginas'];
 $data = $_POST['data'];
+$dataFormatoMySQL = implode("-",array_reverse(explode("/",$data)));
 $local_pdf = $_POST['local_pdf'];
 $palavras_chave = $_POST['palavras_chave'];
 $area = $_POST['area'];
@@ -21,7 +22,7 @@ $novaConexao = new conexao();
 $novaConexao->conecta();
 
 $query = mysql_query("INSERT INTO `trabalho_academico` ( `titulo`, `tipo` , `resumo` , `abstract` , `numero_paginas` , `data` , `local_pdf` , `palavras_chave` , `area`,`autor`,`instituicao`,`orientador`,`ativo`)  
-VALUES ('$titulo', '$tipo', '$resumo', '$abstract', $numero_paginas, '$data', '$local_pdf', '$palavras_chave', '$area','$autor','$instituicao','$orientador',$ativo)");
+VALUES ('$titulo', '$tipo', '$resumo', '$abstract', $numero_paginas, '$dataFormatoMySQL', '$local_pdf', '$palavras_chave', '$area','$autor','$instituicao','$orientador',$ativo)");
 
 if ($query) {
     $mensagemSucesso = new html();
