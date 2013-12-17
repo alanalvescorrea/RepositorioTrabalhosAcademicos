@@ -1,6 +1,5 @@
 <?php
 include 'acessoSeguranca.php';
-require 'html.class.php';
 
 if (!isset($_SESSION))
     session_start();
@@ -13,53 +12,47 @@ if (!isset($_SESSION ['UsuarioID']) or ($_SESSION ['UsuarioNivel'] < $nivel_nece
     exit();
 }
 
-if (isset($_POST ['nome'])) {
-    $nome = strip_tags($_POST ['usuario']);
-    $usuario = strip_tags($_POST ['usuario']);
-    $email = strip_tags($_POST ['email']);
-    $senha = strip_tags($_POST ['senha']);
-    $senha_confirmacao = strip_tags($_POST ['senha_confirmacao']);
-    $nivel = strip_tags($_POST ['nivel']);
 
-    $nome = $_POST ['nome'];
-    $usuario = $_POST ['usuario'];
-    $email = $_POST ['email'];
-    $senha = sha1($_POST ['senha']);
-    $senha_confirmacao = sha1($_POST ['senha_confirmacao']);
-    $nivel = $_POST ['nivel'];
-    $ativo = 1;
-    $data = date("Y-m-d");
-    $hora = date("H:i:s");
+$nome = $_POST ['nome'];
+$usuario = $_POST ['usuario'];
+$email = $_POST ['email'];
+$senha = sha1($_POST ['senha']);
+$senha_confirmacao = sha1($_POST ['senha_confirmacao']);
+$nivel = $_POST ['nivel'];
+$ativo = 1;
+$data = date("Y-m-d");
+$hora = date("H:i:s");
 
-    if ($senha != $senha_confirmacao) {
-        echo '<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+if ($senha != $senha_confirmacao) {
+    echo '<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
                     alert ("Senhas informadas divergem. Informe senhas iguais!")
               </SCRIPT>';
-        echo '<script language= "JavaScript"> location.href="usuario_cadastrar.php"</script>';
-    }
-
-    include ('persistencia/classe_conexao.php');
-    $novaConexao = new conexao ();
-    $novaConexao->conecta();
-
-    $inserir = "INSERT INTO `usuarios` (`nome`, `usuario` , `senha` , `email` , `nivel` , `ativo`, `data`, `hora`)  
-VALUES ('$nome', '$usuario', '$senha', '$email', $nivel, $ativo, '$data', '$hora')";
-    $novaConexao->mysql_query($inserir);
-
-    if (!$novaConexao->mysql_query($inserir)) {
-        $mensagemSucesso = new html ();
-        $mensagemSucesso->menssagemSucessoTrabalhoGravado();
-        echo '<a href="javascript:history.go(-1)">Voltar</a>';
-    } else {
-        
-        $mensagemErro = new html ();
-        $mensagemErro->menssagemErroTrabalhoGravado();
-        echo '<a href="javascript:history.go(-1)">Voltar</a>';
-    }
-
-    exit();
+    echo '<script language= "JavaScript"> location.href="usuario_cadastrar.php"</script>';
 }
-?>
+
+require 'persistencia/classe_conexao.php';
+require 'html.class.php';
+$html = new html();
+$html->includes();
+$html->unicode();
+$novaConexao = new conexao();
+$novaConexao->conecta();
+
+
+$inserir = "INSERT INTO `usuarios` (`nome`, `usuario` , `senha` , `email` , `nivel` , `ativo`, `data`, `hora`)  
+VALUES ('$nome', '$usuario', '$senha', '$email', $nivel, $ativo, '$data', '$hora')";
+$novaConexao->mysql_query($inserir);
+
+if (!$novaConexao->mysql_query($inserir)) {
+    $mensagemSucesso = new html ();
+    $mensagemSucesso->menssagemDadosGravadosComSucesso();
+} else {
+
+    $mensagemErro = new html ();
+    $mensagemErro->menssagemDadosNaoGravados();
+}
+
+exit();
 ?>
 <!DOCTYPE html>
 <html>

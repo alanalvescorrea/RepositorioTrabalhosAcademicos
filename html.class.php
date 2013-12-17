@@ -193,6 +193,8 @@ class html {
 
             <h4>Ótimo!</h4>
             Os dados foram gravados com sucesso :)
+            <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
+
         </div>
 
         <?php
@@ -203,9 +205,7 @@ class html {
         <div class="alert alert-block">
             <h4>Ops..</h4>
             Não foi possível gravas os dados :(
-            <strong>
-                <a href="trabalhoForulario.php">Tente novamente.</a>
-            </strong>
+            <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
         </div>
 
         <?php
@@ -229,7 +229,6 @@ class html {
 
         <!-- Custom JS -->
         <script src="js/custom.js"></script>
-
         <?php
     }
 

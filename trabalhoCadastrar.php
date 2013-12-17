@@ -17,7 +17,9 @@ $ativo = 1;
 
 require 'persistencia/classe_conexao.php';
 require 'html.class.php';
-
+$html= new html();
+$html->includes();
+$html->unicode();
 $novaConexao = new conexao();
 $novaConexao->conecta();
 
