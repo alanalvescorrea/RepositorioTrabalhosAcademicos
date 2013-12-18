@@ -190,11 +190,11 @@ class html {
     function menssagemDadosGravadosComSucesso() {
         ?>
         <div class="alert alert-success">
-
-            <h4>Ótimo!</h4>
-            Os dados foram gravados com sucesso :)
-            <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
-
+            <center>
+                <h4>Ótimo!</h4>
+                Os dados foram gravados com sucesso :)
+                <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
+            </center>
         </div>
 
         <?php
@@ -203,9 +203,11 @@ class html {
     function menssagemDadosNaoGravados() {
         ?>
         <div class="alert alert-block">
-            <h4>Ops..</h4>
-            Não foi possível gravas os dados :(
-            <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
+            <center>
+                <h4>Ops..</h4>
+                Não foi possível gravas os dados :(
+                <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
+            </center>
         </div>
 
         <?php

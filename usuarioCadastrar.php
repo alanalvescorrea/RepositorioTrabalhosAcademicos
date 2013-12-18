@@ -1,4 +1,5 @@
 <?php
+
 include 'acessoSeguranca.php';
 
 if (!isset($_SESSION))
@@ -26,8 +27,10 @@ $hora = date("H:i:s");
 if ($senha != $senha_confirmacao) {
     echo '<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
                     alert ("Senhas informadas divergem. Informe senhas iguais!")
+                    location.href="javascript:history.go(-1)"
               </SCRIPT>';
-    echo '<script language= "JavaScript"> location.href="usuario_cadastrar.php"</script>';
+
+    exit();
 }
 
 require 'persistencia/classe_conexao.php';
@@ -54,58 +57,6 @@ if (!$novaConexao->mysql_query($inserir)) {
 
 exit();
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <?php
-        $carregaClasseHtml = new html();
-        $carregaClasseHtml->includes();
-        $carregaClasseHtml->unicode();
-        $carregaClasseHtml->titulo();
-        ?>
-    </head>
 
-    <body>
-        <?php
-        $header = new html ();
-        $header->topoSistema();
-        ?>
-
-        <!-- CLASSE QUE DEFINE O CONTAINER COMO FLUIDO (100%) -->
-        <div class="container-fluid">
-            <!-- CLASSE PARA DEFINIR UMA LINHA -->
-            <div class="row-fluid">
-                <!-- COLUNA OCUPANDO 2 ESPAÇOS NO GRID -->
-                <?php
-                $menuEsquerdo = new html ();
-                $menuEsquerdo->menu_esquerdo();
-                ?>
-                <!-- COLUNA OCUPANDO 10 ESPAÇOS NO GRID -->
-                <br>
-                <br>
-                <br>
-                <div class="span10">
-                    <?php
-                    $informacoesSobreSessao = new html();
-                    $informacoesSobreSessao->informarSessao();
-                    ?>
-
-                    <div class="span10">
-                        <legend class="breadcrumb">usuário cadastrar</legend>
-
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-            <?php
-            $rodape = new html ();
-            $rodape->rodape();
-            ?>
-        </div>
-    </div>
-</body>
-</html>
 
 
