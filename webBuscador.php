@@ -65,7 +65,7 @@ $novaConexao->conecta();
                                 echo '<hr>';
                                 echo "<strong>$dados[titulo]</strong>.<br> ";
                                 echo " <i>Resumo:</i> $string ...<br />";
-                                echo " <i>Autor:</i> $dados[aluno]<br>";
+                                echo " <i>Autor:</i> $dados[autor]<br>";
                                 echo " <i>Orientador:</i> $dados[orientador]<br />";
                                 echo "<i>Data Apresentação: </i>" . strftime("%d/%m/%Y ", strtotime(@$dados [data])) . "<br>";
                                 echo " <i>Área:</i> $dados[area]<br />";
