@@ -1,5 +1,4 @@
 <?php
-
 $mysqli = new mysqli('localhost', 'root', '', 'repositoriotrabalhosacademicos_db');
 $text = $mysqli->real_escape_string($_GET['term']);
 

@@ -11,6 +11,12 @@ require 'html.class.php';
         $carregaClasseHtml->unicode();
         $carregaClasseHtml->titulo();
         ?>
+        <script>
+            function reloadPage()
+              {
+                  location.reload();
+              }
+        </script>
     </head>
 
     <body>
@@ -62,7 +68,9 @@ require 'html.class.php';
                           <td>$linha[1]</td>
                           <td>$linha[2]</td></tr>";
                             }
-                            echo "<tr><td colspan='3'><input type='submit' name='excluir' value='Excluir!'></td></tr>";
+                            echo "<tr><td colspan='3'>
+                                    <button type='submit' class='btn btn-danger'>Excluir</button>
+                                    </td></tr>";
                             echo "</table></form>";
                         } else {
                             echo "Nenhum registro foi encontrado!";
@@ -72,9 +80,12 @@ require 'html.class.php';
                             $opcoes_text = implode(", ", $opcoes);
                             $strexcluir = "DELETE FROM usuarios WHERE id in (" . $opcoes_text . ")";
                             mysql_query($strexcluir, $conexao) or die("Ocorreu algum erro");
+                            echo'<div class="alert alert-success">
+                                 usuário excluído com sucesso
+                                </div>
+                                <button type="button" class="btn btn-info" onclick="reloadPage()">Veja como ficou</button>';
                         } else {
-                            echo "É necessário escolher quem será excluído<br>";
-                            echo "<a href='javascript: history.back();'>Voltar</a>";
+                            echo '<span class="label label-info">Selecione o usuário que será excluído</span>';
                         }
                         ?>   
                     </div>

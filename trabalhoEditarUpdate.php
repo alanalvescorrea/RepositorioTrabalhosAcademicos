@@ -207,7 +207,7 @@ require 'html.class.php';
 
                                         <div class="controls">
                                             <input name="id" type="hidden" id="id" value="<?php echo $rows['id']; ?>"/>
-                                            <input type="submit" name="Submit" value="Submit" /></td>
+                                            <button type='submit' class='btn btn-info'>Salvar alterações</button>
                                         </div>
                                     </div>
                                 </fieldset>
