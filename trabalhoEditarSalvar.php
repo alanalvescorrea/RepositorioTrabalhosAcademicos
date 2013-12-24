@@ -71,7 +71,7 @@ require 'html.class.php';
                         if ($result) {
                             $dadosGravadosComSucesso = new html();
                             $dadosGravadosComSucesso->menssagemDadosGravadosComSucesso();
-                            
+
                             echo "<a href='trabalhoEditarListar.php'>Veja como ficou!</a>";
                         } else {
                             echo "ERROR";
@@ -89,6 +89,10 @@ require 'html.class.php';
     <?php
     $rodape = new html ();
     $rodape->rodape();
+    ?>
+    <?php
+    $fechaConexao = new conexao();
+    $fechaConexao->desconectar()
     ?>
 </div>
 </div>

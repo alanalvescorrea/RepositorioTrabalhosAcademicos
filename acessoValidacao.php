@@ -58,6 +58,10 @@ require 'persistencia/classe_conexao.php';
             exit;
         }
         ?>
+        <?php
+        $fechaConexao = new conexao();
+        $fechaConexao->desconectar()
+        ?>
     </body>
 </html>
 

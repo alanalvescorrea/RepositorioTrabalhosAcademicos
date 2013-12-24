@@ -139,6 +139,10 @@ require 'html.class.php';
             $rodape = new html ();
             $rodape->rodape();
             ?>
+            <?php
+            $fechaConexao = new conexao();
+            $fechaConexao->desconectar()
+            ?>
         </div>
     </div>
 </body>

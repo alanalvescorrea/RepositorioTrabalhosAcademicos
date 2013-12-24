@@ -1,4 +1,5 @@
 <?php
+
 $mysqli = new mysqli('localhost', 'root', '', 'repositoriotrabalhosacademicos_db');
 $text = $mysqli->real_escape_string($_GET['term']);
 
@@ -16,4 +17,9 @@ while ($row = $result->fetch_assoc()) {
 }
 $json .= ']';
 echo $json;
+?>
+<?php
+
+$fechaConexao = new conexao();
+$fechaConexao->desconectar()
 ?>
