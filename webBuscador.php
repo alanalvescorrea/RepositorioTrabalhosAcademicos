@@ -1,20 +1,8 @@
 <?php
 require 'html.class.php';
 require 'persistencia/classe_conexao.php';
-
-
-// ConexÃ£o e consulta ao Mysql
 $novaConexao = new conexao ();
 $novaConexao->conecta();
-
-@$busca = $_POST ['palavra']; // palavra que o usuario digitou
-
-$consulta = "SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'AND ativo='1'order by titulo ASC"; // faz a busca com as palavras enviadas
-$novaConexao->mysql_query($consulta);
-
-if (empty($consulta)) { // Se nao achar nada, lanÃ§a essa mensagem
-    echo "Nenhum registro encontrado.";
-}
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +48,16 @@ if (empty($consulta)) { // Se nao achar nada, lanÃ§a essa mensagem
                             </center>
 
                             <?php
-                            
+                            $busca = $_POST ['palavra']; // palavra que o usuario digitou
+
+                            $consulta = "SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'AND ativo='1'order by titulo ASC"; // faz a busca com as palavras enviadas
+                            $novaConexao->mysql_query($consulta);
+
+                            if (empty($busca)) { // Se nao achar nada, lanÃ§a essa mensagem
+                                echo "Informe um termo e realize sua pesquisa.";
+                                exit();
+                               
+                            }
 
                             while ($dados = $novaConexao->resultado()) {
                                 $string = $dados [resumo];
@@ -79,8 +76,7 @@ if (empty($consulta)) { // Se nao achar nada, lanÃ§a essa mensagem
                             ?>
 
                         </div>
-                        <?php
-                        ?>                        
+                        <?php ?>                        
                     </div>
                 </div>
             </div>
