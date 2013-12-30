@@ -80,10 +80,10 @@ require 'html.class.php';
 
                 </div>
             </div>
-            <?php
-            $rodape = new html ();
-            $rodape->rodape();
-            ?>
+<?php
+$rodape = new html ();
+$rodape->rodape();
+?>
         </div>
     </div>
 </body>

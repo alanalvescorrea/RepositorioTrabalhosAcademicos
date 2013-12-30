@@ -192,8 +192,10 @@ class html {
         <div class="alert alert-success">
             <center>
                 <h4>Ótimo!</h4>
-                Os dados foram gravados com sucesso :)
-                <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
+                Os dados foram gravados com sucesso :)<br>
+                <!--<strong><a href="javascript:history.go(-1)">Voltar</a> </strong>-->
+                <a href='acessoRestrito.php'>Voltar para gerência do sistema</a>
+                
             </center>
         </div>
 
@@ -206,7 +208,7 @@ class html {
             <center>
                 <h4>Ops..</h4>
                 Não foi possível gravas os dados :(
-                <strong><a href="javascript:history.go(-1)">Voltar</a> </strong>
+                <strong><a href="javascript:history.go(-1)">Tente novamente</a> </strong>
             </center>
         </div>
 

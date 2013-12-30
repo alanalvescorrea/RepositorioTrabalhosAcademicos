@@ -37,7 +37,7 @@ $novaConexao->conecta();
                                 Acadêmicos</legend>
                             <center>
                                 <form action=" " method="post">
-                                    <input type="text" name="palavra" required="" class="input-xlarge" />
+                                    <input type="text" name="palavra" required="" class="input-xlarge"/>
                                     <div class="control-group">
 
                                         <div class="controls">

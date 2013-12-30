@@ -72,7 +72,6 @@ require 'html.class.php';
                             $dadosGravadosComSucesso = new html();
                             $dadosGravadosComSucesso->menssagemDadosGravadosComSucesso();
 
-                            echo "<a href='trabalhoEditarListar.php'>Veja como ficou!</a>";
                         } else {
                             echo "ERROR";
                         }
