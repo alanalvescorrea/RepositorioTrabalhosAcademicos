@@ -96,7 +96,7 @@ require 'html.class.php';
                             "</td><td>" . $linha->area .
                             "</td><td>" . $linha->tipo .
                             "</td><td>" . $linha->numero_paginas .
-                            "</td><td><a href=\" $linha->local_pdf\" >PDF</a>";
+                            "</td><td><a href=\" $linha->local_pdf\" target='_blank' >PDF</a>";
                             "</td></tr>";
                         }
                         echo "</table>"; /* fecha a tabela apos termino de impressão das linhas */
