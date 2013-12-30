@@ -77,7 +77,7 @@ require 'html.class.php';
                         $sql = mysql_query("SELECT $campos_query $final_query LIMIT $inicio,$maximo");
 
 // Exibimos os nomes dos produtos e seus repectivos valores
-                        echo 'Numero total de usuario cadastrados ' . $total . '<br>';
+                        echo 'Numero total de trabalhos cadastrados ' . $total . '<br>';
                         echo "<table class='table table-condensed'>
                         <tr class='success'>
                             <td>Titulo</td>
@@ -86,6 +86,7 @@ require 'html.class.php';
                             <td>Area</td>
                             <td>Tipo</td>
                             <td>Paginas</td>
+                            <td>Arquivo</td>
                         </tr>";
                         while ($linha = mysql_fetch_object($sql)) {
 
@@ -95,6 +96,7 @@ require 'html.class.php';
                             "</td><td>" . $linha->area .
                             "</td><td>" . $linha->tipo .
                             "</td><td>" . $linha->numero_paginas .
+                            "</td><td><a href=\" $linha->local_pdf\" >PDF</a>";
                             "</td></tr>";
                         }
                         echo "</table>"; /* fecha a tabela apos termino de impressão das linhas */
