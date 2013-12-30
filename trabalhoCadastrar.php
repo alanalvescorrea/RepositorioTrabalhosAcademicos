@@ -35,8 +35,3 @@ if ($query) {
     $mensagemErro->menssagemDadosNaoGravados();
 }
 ?>
-<?php
-
-$fechaConexao = new conexao();
-$fechaConexao->desconectar()
-?>

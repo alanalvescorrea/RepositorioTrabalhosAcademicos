@@ -57,11 +57,5 @@ if (!$novaConexao->mysql_query($inserir)) {
 
 exit();
 ?>
-<?php
-
-$fechaConexao = new conexao();
-$fechaConexao->desconectar()
-?>
-
 
 

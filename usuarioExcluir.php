@@ -46,7 +46,7 @@ require 'html.class.php';
 
                     <div class="span10">
                         <hr />  
-                        <legend class="breadcrumb">Editar Trabalhos Acadêmicos Cadastrados</legend>
+                        <legend class="breadcrumb">Editar usuários cadastrados</legend>
 
                         <?php
                         require 'persistencia/classe_conexao.php';
@@ -83,7 +83,7 @@ require 'html.class.php';
                             echo'<div class="alert alert-success">
                                  usuário excluído com sucesso
                                 </div>
-                                <button type="button" class="btn btn-info" onclick="reloadPage()">Veja como ficou</button>';
+                                <button type="button" class="btn btn-info" onclick="reloadPage()">Atualizar lista de usuários</button>';
                         } else {
                             echo '<span class="label label-info">Selecione o usuário que será excluído</span>';
                         }
@@ -102,10 +102,7 @@ require 'html.class.php';
     $rodape = new html ();
     $rodape->rodape();
     ?>
-    <?php
-    $fechaConexao = new conexao();
-    $fechaConexao->desconectar()
-    ?>
+    
 </body>
 </html>
 

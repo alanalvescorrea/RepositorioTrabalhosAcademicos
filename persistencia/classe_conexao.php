@@ -26,9 +26,8 @@ class conexao {
     }
 
     function desconectar() {
-        mysql_close($this->conexao);
+        mysql_close($conexao);
     }
 
 }
-
 ?>

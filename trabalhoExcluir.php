@@ -83,7 +83,7 @@ require 'html.class.php';
                             echo'<div class="alert alert-success">
                                  usuário excluído com sucesso
                                 </div>
-                                <button type="button" class="btn btn-info" onclick="reloadPage()">Veja como ficou</button>';
+                                <button type="button" class="btn btn-info" onclick="reloadPage()">Atualizar lista de trabalhos cadastrados</button>';
                         } else {
                             echo '<span class="label label-info">Selecione o trabalho que será excluído</span>';
                         }
@@ -102,10 +102,7 @@ require 'html.class.php';
     $rodape = new html ();
     $rodape->rodape();
     ?>
-    <?php
-    $fechaConexao = new conexao();
-    $fechaConexao->desconectar()
-    ?>
+    
 </body>
 </html>
 

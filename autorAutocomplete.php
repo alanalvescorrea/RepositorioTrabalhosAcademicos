@@ -17,9 +17,6 @@ while ($row = $result->fetch_assoc()) {
 }
 $json .= ']';
 echo $json;
-?>
-<?php
 
-$fechaConexao = new conexao();
-$fechaConexao->desconectar()
+
 ?>

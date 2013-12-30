@@ -1,6 +1,8 @@
 <?php
 include 'acessoSeguranca.php';
 require 'html.class.php';
+include 'persistencia/classe_conexao.php';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,10 +88,7 @@ require 'html.class.php';
             $rodape = new html ();
             $rodape->rodape();
             ?>
-            <?php
-            $fechaConexao = new conexao();
-            $fechaConexao->desconectar()
-            ?>
+            
         </div>
     </div>
 </body>
