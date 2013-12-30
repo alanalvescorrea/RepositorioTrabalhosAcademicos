@@ -46,7 +46,7 @@ require 'html.class.php';
 
                     <div class="span10">
                         <hr />  
-                        <legend class="breadcrumb">Editar usuários cadastrados</legend>
+                        <legend class="breadcrumb">Excluir usuários cadastrados</legend>
 
                         <?php
                         require 'persistencia/classe_conexao.php';

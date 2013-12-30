@@ -2,6 +2,9 @@
 include 'acessoSeguranca.php';
 require 'html.class.php';
 ?>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,45 +14,7 @@ require 'html.class.php';
         $carregaClasseHtml->unicode();
         $carregaClasseHtml->titulo();
         ?>
-        <?php
-// Conexão e consulta ao Mysql
-        include ('persistencia/classe_conexao.php');
-        $novaConexao = new conexao ();
-        $novaConexao->conecta();
-        $qry = mysql_query("select nome, usuario, email, nivel, ativo from usuarios ORDER BY nome");
-
-// Pegando quantidade de registros
-        $sql = "SELECT * FROM usuarios";
-        $res = mysql_query($sql);
-        $rows = mysql_num_rows($res);
-
-// Pegando os nomes dos campos
-        $num_fields = mysql_num_fields($qry); // Obtém o número de campos do resultado
-
-        for ($i = 0; $i < $num_fields; $i++) { // Pega o nome dos campos
-            $fields [] = mysql_field_name($qry, $i);
-        }
-
-// Montando o cabeçalho da tabela
-        $table = '<table class="table table-condensed"><tr class="success">';
-
-        for ($i = 0; $i < $num_fields; $i++) {
-            $table .= '<th>' . $fields [$i] . '</th>';
-        }
-
-// Montando o corpo da tabela
-        $table .= '<tbody>';
-        while ($r = mysql_fetch_array($qry)) {
-            $table .= '<tr class="success">';
-            for ($i = 0; $i < $num_fields; $i++) {
-                $table .= '<td>' . $r [$fields [$i]] . '</td>';
-            }
-            $table .= '</tr>';
-        }
-
-// Finalizando a tabela
-        $table .= '</tbody></table>';
-        ?>
+        <?php ?>
     </head>
 
     <body>
@@ -77,12 +42,94 @@ require 'html.class.php';
                     $informacoesSobreSessao->informarSessao();
                     ?>
 
+
                     <div class="span10">
                         <legend class="breadcrumb">Consultar usuários cadastrados</legend>
-                        Quantidade de usuários cadastrados: 
-                        <?php echo("$rows"); ?>
-                        <?php echo $table; ?>
+                        <?php
+                        $conexao = mysql_connect("localhost", "root", ""); // Faz a conexão com o servidor local
+                        $banco = mysql_select_db("repositoriotrabalhosacademicos_db", $conexao); // Seleciona o banco de dados 'loja'
+// Informações da query
+                        $campos_query = "*";
+                        $final_query = "FROM usuarios ORDER BY nome ASC";
+
+// Maximo de registros por pagina
+                        $maximo = 5;
+
+// Declaração da pagina inicial
+                        $pagina = $_GET["pagina"];
+                        if ($pagina == "") {
+                            $pagina = "1";
+                        }
+
+// Calculando o registro inicial
+                        $inicio = $pagina - 1;
+                        $inicio = $maximo * $inicio;
+
+// Conta os resultados no total da query
+                        $strCount = "SELECT COUNT(*) AS 'num_registros' $final_query";
+                        $query = mysql_query($strCount);
+                        $row = mysql_fetch_array($query);
+                        $total = $row["num_registros"];
+
+###################################################################################
+// INICIO DO CONTEÚDO
+// Realizamos a query
+                        $sql = mysql_query("SELECT $campos_query $final_query LIMIT $inicio,$maximo");
+
+// Exibimos os nomes dos produtos e seus repectivos valores
+                        echo 'Numero total de usuario cadastrados ' . $total . '<br>';
+                        echo "<table class='table table-condensed'>
+                        <tr class='success'>
+                            <td>Nome</td>
+                            <td>Nome do Usuário</td>
+                            <td>Email</td>
+                            <td>Nivel</td>
+                            <td>Ativo</td>
+                        </tr>";
+                        while ($linha = mysql_fetch_object($sql)) {
+
+                            echo "<tr><td>" . $linha->nome .
+                            "</td><td>" . $linha->usuario .
+                            "</td><td>" . $linha->email .
+                            "</td><td>" . $linha->nivel .
+                            "</td><td>" . $linha->ativo .
+                            "</td></tr>";
+                        }
+                        echo "</table>"; /* fecha a tabela apos termino de impressão das linhas */
+
+// FIM DO CONTEUDO###################################################################################
+
+                        $menos = $pagina - 1;
+                        $mais = $pagina + 1;
+
+                        $pgs = ceil($total / $maximo);
+
+                        if ($pgs > 1) {
+
+                            echo "<br />";
+
+                            // Mostragem de pagina
+                            if ($menos > 0) {
+                                echo "<a href=" . $_SERVER['PHP_SELF'] . "?pagina=$menos>anterior</a>&nbsp; ";
+                            }
+
+                            // Listando as paginas
+                            for ($i = 1; $i <= $pgs; $i++) {
+                                if ($i != $pagina) {
+                                    echo " <a href=" . $_SERVER['PHP_SELF'] . "?pagina=" . ($i) . ">$i</a> | ";
+                                } else {
+                                    echo " <strong>" . $i . "</strong> | ";
+                                }
+                            }
+
+                            if ($mais <= $pgs) {
+                                echo " <a href=" . $_SERVER['PHP_SELF'] . "?pagina=$mais>próxima</a>";
+                            }
+                        }
+                        ?>
+
                     </div>
+
                 </div>
             </div>
             <br>
@@ -92,10 +139,11 @@ require 'html.class.php';
             $rodape = new html ();
             $rodape->rodape();
             ?>
-            
+
         </div>
     </div>
-</body>
-</html>
 
+</body>
+
+</html>
 
