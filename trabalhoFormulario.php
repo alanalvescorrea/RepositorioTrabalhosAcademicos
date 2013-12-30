@@ -71,7 +71,7 @@ require 'html.class.php';
                                 </div>
                                 <!-- autor ----------------------------------------------------->
                                 <div class="control-group">
-                                    <label class="control-label" for="aluno">Autor</label>
+                                    <label class="control-label" for="aluno">Autor Principal</label>
                                     <div class="controls">
                                         <?php require 'autorFormulario.php'; ?>
                                     </div>
@@ -103,6 +103,7 @@ require 'html.class.php';
                                             <option>Monografia</option>
                                             <option>Dissertação</option>
                                             <option>Tese</option>
+                                            <option>Artigo</option>
                                             <!--<option>Paper</option>-->
                                         </select>
                                     </div>
