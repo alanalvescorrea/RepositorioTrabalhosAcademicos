@@ -70,7 +70,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label" for="titulo">Título do trabalho</label>
                                         <div class="controls">
-                                            <input name="titulo" type="text" id="titulo" value="<?php echo $rows['titulo']; ?>"size= "40"/>
+                                            <input name="titulo" type="text" id="titulo" value="<?php echo $rows['titulo']; ?>"class="input-xxlarge"/>
                                         </div>
                                     </div>
 
@@ -79,7 +79,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label" for="autor">Autor</label>
                                         <div class="controls">
-                                            <input name="autor" type="text" id="autor" value="<?php echo $rows['autor']; ?>"size= "15"/>
+                                            <input name="autor" type="text" id="autor" value="<?php echo $rows['autor']; ?>"class="input-xxlarge"/>
                                         </div>
                                     </div>
 
@@ -88,7 +88,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="orientador">Orientador</label>
                                         <div class="controls">
-                                            <input name="orientador" type="text" id="orientador" value="<?php echo $rows['orientador']; ?>"size= "15"/>
+                                            <input name="orientador" type="text" id="orientador" value="<?php echo $rows['orientador']; ?>"class="input-xxlarge"/>
                                         </div>
                                     </div>
 
@@ -97,7 +97,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label" for="data">Data Apresentação  </label>
                                         <div class="controls">
-                                            <input name="data" type="text" id="data" value="<?php echo $rows['data']; ?>"size= "15"/>
+                                            <input name="data" type="date" id="data" value="<?php echo $rows['data']; ?>" />
                                         </div>
                                     </div>
 
@@ -108,7 +108,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label" for="tipo">Tipo</label>
                                         <div class="controls">
-                                            <input name="tipo" type="text" id="tipo" value="<?php echo $rows['tipo']; ?>"size= "15"/>
+                                            <input name="tipo" type="text" id="tipo" value="<?php echo $rows['tipo']; ?>" class="input-large"/>
                                         </div>
                                     </div>
 
@@ -117,7 +117,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="resumo">Resumo</label>
                                         <div class="span6">
-                                            <textarea class="field span8" name="resumo" rows="10"><?php echo $rows['resumo']; ?> </textarea><br />                                           </div>
+                                            <textarea class="field span12" name="resumo" rows="15"><?php echo $rows['resumo']; ?> </textarea><br />                                           </div>
                                     </div>
 
 
@@ -125,7 +125,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="palavras_chave">Palavras-Cahave</label>
                                         <div class="controls">
-                                            <input name="palavras_chave" type="text" id="palavras_chave" value="<?php echo $rows['palavras_chave']; ?>"size= "15"/><br />  
+                                            <input name="palavras_chave" type="text" id="palavras_chave" value="<?php echo $rows['palavras_chave']; ?>" class="input-xxlarge"/><br />  
                                         </div>
                                     </div>
 
@@ -135,7 +135,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="abstract">Abstract</label>
                                         <div class="span6">
-                                            <textarea class="field span8" name="abstract" rows="10"><?php echo $rows['abstract']; ?> </textarea><br />     <br />                                            </div>
+                                            <textarea class="field span12" name="abstract" rows="15"><?php echo $rows['abstract']; ?> </textarea><br />     <br />                                            </div>
                                     </div>
 
 
@@ -144,7 +144,7 @@ require 'html.class.php';
 
                                         <label class="control-label"  for="numero_paginas">Número de Páginas</label>
                                         <div class="controls">
-                                            <input name="numero_paginas" type="text" id="numero_paginas" value="<?php echo $rows['numero_paginas']; ?>"size= "15"/><br />  
+                                            <input name="numero_paginas" type="text" id="numero_paginas" value="<?php echo $rows['numero_paginas']; ?>"class="input-mini"/><br />  
                                         </div>
                                     </div>
 
@@ -154,7 +154,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="area">Área</label>
                                         <div class="controls">
-                                            <input name="area" type="text" id="area" value="<?php echo $rows['area']; ?>"size= "15"/><br />  
+                                            <input name="area" type="text" id="area" value="<?php echo $rows['area']; ?>" class="input-xxlarge"/><br />  
 
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="instituicao">Instituição</label>
                                         <div class="controls">
-                                            <input name="instituicao" type="text" id="instituicao" value="<?php echo $rows['instituicao']; ?>"size= "15"/><br />  
+                                            <input name="instituicao" type="text" id="instituicao" value="<?php echo $rows['instituicao']; ?>"class="input-xxlarge"/><br />  
 
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="local_pdf">Local PDF</label>
                                         <div class="controls">
-                                            <input name="local_pdf" type="text" id="local_pdf" value="<?php echo $rows['local_pdf']; ?>"size= "15"/><br />  
+                                            <input name="local_pdf" type="text" id="local_pdf" value="<?php echo $rows['local_pdf']; ?>"class="input-xxlarge"/><br />  
                                         </div>
                                     </div>
 
@@ -195,7 +195,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="ativo">Ativo</label>
                                         <div class="controls">
-                                            <input name="ativo" type="text" id="ativo" value="<?php echo $rows['ativo']; ?>"size= "15"/><br />  
+                                            <input name="ativo" type="number" id="ativo" value="<?php echo $rows['ativo']; ?>"class="input-mini" min="0" max="1"/><br />  
 
                                         </div>
                                     </div>

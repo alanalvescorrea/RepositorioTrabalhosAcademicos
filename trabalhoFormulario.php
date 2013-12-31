@@ -79,7 +79,7 @@ require 'html.class.php';
                                 <!--form cadastrar novon aluno-->
                                 <!-- orientador -->
                                 <div class="control-group">
-                                    <label class="control-label"  for="aluno">Orientador</label>
+                                    <label class="control-label"  for="orientador">Orientador</label>
                                     <div class="controls">
                                         <?php require 'orientadorFormulario.php'; ?>
                                     </div>
@@ -90,7 +90,7 @@ require 'html.class.php';
                                 <div class="control-group">
                                     <label class="control-label" for="data">Data Apresentação  </label>
                                     <div class="controls">
-                                        <input type="text" id="data" name="data"class="data" class="input-mini"/>
+                                        <input type="date" name="data"/>
                                     </div>
                                 </div>
                                 <!-- fim data -->

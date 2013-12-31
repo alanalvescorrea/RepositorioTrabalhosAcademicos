@@ -74,7 +74,7 @@ require 'html.class.php';
                                     <!-- E-mail -->
                                     <label class="control-label" for="email">E-mail</label>
                                     <div class="controls">
-                                        <input type="text" id="email" name="email" placeholder=""
+                                        <input type="email" id="email" name="email" placeholder=""
                                                class="input-xlarge" required="">
                                         <p class="help-block">Por favor, forneça seu endereço de e-mail</p>
                                     </div>
@@ -84,8 +84,7 @@ require 'html.class.php';
                                     <!-- Password-->
                                     <label class="control-label" for="senha">Senha</label>
                                     <div class="controls">
-                                        <input type="password" id="senha" name="senha" placeholder=""
-                                               class="input-xlarge" required="">
+                                        <input type="password" id="senha" name="senha" placeholder="" class="input-large" required="">
                                         <p class="help-block"></p>
                                     </div>
                                 </div>
@@ -96,7 +95,7 @@ require 'html.class.php';
                                         (Confirmaçao)</label>
                                     <div class="controls">
                                         <input type="password" id="senha_confirmacao"
-                                               name="senha_confirmacao" placeholder="" class="input-xlarge"
+                                               name="senha_confirmacao" placeholder="" class="input-large"
                                                required="">
                                         <p class="help-block">Por favor, confirme a senha.</p>
                                     </div>
@@ -105,8 +104,7 @@ require 'html.class.php';
                                     <!-- E-mail -->
                                     <label class="control-label" for="nivel">Nível</label>
                                     <div class="controls">
-                                        <input type="text" id="nivel" name="nivel" placeholder=""
-                                               class="input-xlarge" required="">
+                                        <input type="number" id="nivel" name="nivel" required="" class="input-mini" min="1" max="2">
                                         <p class="help-block">
                                             Por favor, forneça o nível de usuário. <br>1-Normal.
                                             2-Adminstrador

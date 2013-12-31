@@ -88,7 +88,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label" for="email">Email</label>
                                         <div class="controls">
-                                            <input name="email" type="text" id="email" value="<?php echo $rows['email']; ?>"size= "15"/>
+                                            <input name="email" type="email" id="email" value="<?php echo $rows['email']; ?>"size= "15"/>
                                         </div>
                                     </div>
 
@@ -98,7 +98,7 @@ require 'html.class.php';
                                     <div class="control-group">
                                         <label class="control-label"  for="nivel">Nível</label>
                                         <div class="controls">
-                                            <input name="nivel" type="text" id="nivel" value="<?php echo $rows['nivel']; ?>"size= "15"/><br />  
+                                            <input name="nivel" type="number" id="nivel" value="<?php echo $rows['nivel']; ?>"required="" class="input-mini" min="1" max="2"/><br />  
                                         </div>
                                     </div>
 
@@ -109,7 +109,7 @@ require 'html.class.php';
 
                                         <label class="control-label"  for="ativo">Ativo</label>
                                         <div class="controls">
-                                            <input name="ativo" type="text" id="ativo" value="<?php echo $rows['ativo']; ?>"size= "15"/><br />  
+                                            <input name="ativo" type="number" id="ativo" value="<?php echo $rows['ativo']; ?>"required="" class="input-mini" min="0" max="1"/><br />  
                                         </div>
                                     </div>
 
