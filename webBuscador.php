@@ -37,7 +37,7 @@ $novaConexao->conecta();
                                 Acadêmicos</legend>
                             <center>
                                 <form action=" " method="post">
-                                    <input type="text" name="palavra" required="" class="input-xlarge"/>
+                                    <input type="text" name="palavra" required="" class="input-xxlarge" placeholder="busque o que deseja pelo título, autor ou orientador"/>
                                     <div class="control-group">
 
                                         <div class="controls">
@@ -50,11 +50,16 @@ $novaConexao->conecta();
                             <?php
                             $busca = $_POST ['palavra']; // palavra que o usuario digitou
 
-                            $consulta = "SELECT * FROM trabalho_academico WHERE titulo LIKE '%$busca%'AND ativo='1'order by titulo ASC"; // faz a busca com as palavras enviadas
+                            $consulta = "SELECT * FROM trabalho_academico WHERE (titulo LIKE '%$busca%' or
+                                                                                 autor LIKE '%$busca%'  or
+                                                                                 orientador LIKE '%$busca%')
+                                         AND ativo='1'order by titulo ASC"; // faz a busca com as palavras enviadas
+                            
+                            
                             $novaConexao->mysql_query($consulta);
 
                             if (empty($busca)) { // Se nao achar nada, lanÃ§a essa mensagem
-                                echo "Informe um termo e realize sua pesquisa.";
+                                echo "Buscar o que você é simlples! É só usar a caixa acima e pesquisar!";
                                 exit();
                                
                             }
