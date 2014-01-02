@@ -40,7 +40,7 @@ include 'persistencia/classe_conexao.php';
                     ?>
 
                     <div class="span10">
-                        <legend class="breadcrumb">Editar usuários cadastrados</legend>
+                        <legend class="breadcrumb">Editar usuário</legend>
                         <?php
 // Connect to server and select database.
                         mysql_connect("localhost", "root", "") or die("cannot connect");

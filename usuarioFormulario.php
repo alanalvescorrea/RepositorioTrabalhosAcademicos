@@ -39,16 +39,12 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        <legend class="breadcrumb">Cadastrar novos usuários</legend>
-
-
+                        <legend class="breadcrumb">Cadastrar usuário</legend>
 
 
                         <form class="form-horizontal" action='usuarioCadastrar.php' method="POST">
                             <fieldset>
-                                <div id="legend">
-                                    <legend class="">Cadastro</legend>
-                                </div>
+                               
                                 <div class="control-group">
                                     <!-- Username -->
                                     <label class="control-label" for="nome">Nome Completo</label>

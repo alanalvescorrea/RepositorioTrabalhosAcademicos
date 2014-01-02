@@ -41,7 +41,7 @@ include 'persistencia/classe_conexao.php';
                     ?>
 
                     <div class="span10">
-                        <legend class="breadcrumb">Editar trabalhos acadêmicos cadastrados</legend>
+                        <legend class="breadcrumb">Editar trabalhos acadêmicos</legend>
                         <?php
 // Connect to server and select database.
                         mysql_connect("localhost", "root", "") or die("cannot connect");

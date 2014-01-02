@@ -39,7 +39,7 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        <legend class="breadcrumb">Editar usuários cadastrados</legend>
+                        <legend class="breadcrumb">Editar usuário</legend>
 
                         <?php
 // Connect to server and select database.

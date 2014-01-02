@@ -26,7 +26,7 @@ class conexao {
     }
 
     function desconectar() {
-        mysql_close($conexao);
+        mysql_close();
     }
 
 }

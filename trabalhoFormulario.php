@@ -59,7 +59,7 @@ require 'html.class.php';
                         <form class="form-horizontal" action='trabalhoCadastrar.php' method="POST">
                             <fieldset>
                                 <div id="legend">
-                                    <legend class="breadcrumb">Cadastrar trabalho Acadêmico</legend>
+                                    <legend class="breadcrumb">Cadastrar trabalho acadêmico</legend>
                                 </div>
 
                                 <!-- titulo --------------------------------------------------->

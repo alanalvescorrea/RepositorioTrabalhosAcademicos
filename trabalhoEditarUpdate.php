@@ -61,7 +61,7 @@ require 'html.class.php';
                             <form class="form-horizontal" action='trabalhoEditarSalvar.php' method="POST">
                                 <fieldset>
                                     <div id="legend">
-                                        <legend class="breadcrumb">Editar trabalho Acadêmico</legend>
+                                        <legend class="breadcrumb">Editar trabalho acadêmico</legend>
                                     </div>
 
 

@@ -39,7 +39,7 @@ require 'html.class.php';
                     ?>
 
                     <div class="span10">
-                        <legend class="breadcrumb">Editar trabalhos acadêmicos cadastrados</legend>
+                        <legend class="breadcrumb">Editar trabalhos acadêmicos</legend>
 
                         <?php
 // Connect to server and select database.

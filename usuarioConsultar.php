@@ -44,7 +44,7 @@ require 'html.class.php';
 
 
                     <div class="span10">
-                        <legend class="breadcrumb">Consultar usuários cadastrados</legend>
+                        <legend class="breadcrumb">Consultar usuário</legend>
                         <?php
                         $conexao = mysql_connect("localhost", "root", ""); // Faz a conexão com o servidor local
                         $banco = mysql_select_db("repositoriotrabalhosacademicos_db", $conexao); // Seleciona o banco de dados 'loja'

@@ -46,7 +46,7 @@ require 'html.class.php';
 
                     <div class="span10">
                         <hr />  
-                        <legend class="breadcrumb">Excluir trabalhos acadêmicos cadastrados</legend>
+                        <legend class="breadcrumb">Excluir trabalhos acadêmicos</legend>
 
                         <?php
                         require 'persistencia/classe_conexao.php';

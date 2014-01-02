@@ -10,7 +10,7 @@ class html {
 
     function metaTag() {
         ?>
-        <meta name="description" content="Repositorio digital de trabalhos acadêmicos">
+        <meta name="description" content="Biblioteca Virtual de trabalhos acadêmicos">
         <meta name="keywords" content="educação,mestrado,doutorado, monografia, biblioteca digital">
         <meta name="author" content="projeto polosap">
 
@@ -77,7 +77,7 @@ class html {
                         <div class="header-text">
                             <!-- LOGO -->
                             <h3>Ptolomeu</h3>
-                            <p>Repositório virtual de trabalhos acadêmicos</p>
+                            <p>Bibioteca virtual de trabalhos acadêmicos</p>
                         </div>
                     </div>
 
