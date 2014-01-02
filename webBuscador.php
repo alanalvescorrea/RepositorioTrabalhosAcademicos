@@ -59,7 +59,7 @@ $novaConexao->conecta();
                             $novaConexao->mysql_query($consulta);
 
                             if (empty($busca)) { // Se nao achar nada, lanÃ§a essa mensagem
-                                echo "Buscar o que você é simlples! É só usar a caixa acima e pesquisar!";
+                                echo "Encontrar o que você precisa é simlples! É só usar a caixa acima e pesquisar!";
                                 exit();
                                
                             }
