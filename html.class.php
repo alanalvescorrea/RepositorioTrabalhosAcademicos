@@ -111,7 +111,7 @@ class html {
                     <div class="navbar-inner">
                         <div class="container">
                             <!--<br><img src="img" alt="ptolomeu" align="right"/-->
-                            <h3><font size="6" color="00BFFF">Ptolomeu</font> Repositório virtual de trabalhos acadêmicos</h3>
+                            <h3><font size="6" color="00BFFF">Ptolomeu</font> biblioteca virtual de trabalhos acadêmicos</h3>
                         </div>
                     </div>
                 </div>

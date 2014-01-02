@@ -56,7 +56,7 @@ require 'html.class.php';
                         <?php
                         if ($_SESSION ['UsuarioNivel'] == 2) {
                             $menuRestrito =
-                                    '<h4><br>Gerência de Usuários</h4>
+                                    '<h4><br>Usuários</h4>
                                               
                                                <a href="usuarioFormulario.php" class="btn btn-primary">
                                                  <i class="icon-pencil icon-white"></i> <span><strong>Cadastrar</strong></span>
@@ -71,7 +71,7 @@ require 'html.class.php';
                                                  <i class="icon-trash icon-white"></i>
                                                  <span><strong>Excluir</strong></span>        	
                                                </a>
-                                             ';
+                                             <br><br>';
                         }
                         echo $menuRestrito;
                         ?>
@@ -80,6 +80,7 @@ require 'html.class.php';
 
                 </div>
             </div>
+            
 <?php
 $rodape = new html ();
 $rodape->rodape();

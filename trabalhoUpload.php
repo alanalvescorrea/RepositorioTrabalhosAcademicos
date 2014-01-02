@@ -49,12 +49,21 @@ require 'html.class.php';
                     $ftp_con = ftp_connect($host_ftp);
 
                     if ($ftp_con) {
-                        echo 'Conexão FTP realizada com sucesso..<br>';
+                        echo 'Conexão FTP realizada com sucesso!<br>';
+                    }
+                    else{
+                        echo 'Conexão FTP não foi realizada<br>';
+                        exit();
                     }
 // Efetua o login com o usuário e senha informados
                     $ftp_log = ftp_login($ftp_con, $user_ftp, $pass_ftp);
                     if ($ftp_log) {
-                        echo 'Login FTP realizado com sucesso..<br>';
+                        echo 'Login FTP realizado com sucesso!<br>';
+                    }
+                    else{
+                        
+                        echo 'Login FTP não foi realizado<br>';
+                        exit();
                     }
 
 // Em seu formulário, crie um campo do tipo "file" com o nome de "arquivo", 
@@ -72,6 +81,11 @@ require 'html.class.php';
                         echo '<hr>Selecione e copie o caminho do arquivo:<br>';
                         echo '<strong>http://informatica.besaba.com/trabalhosacademicos/' . $arquivo_nome . '<strong></hr>';
                         exit();
+                    }
+                    
+                    else{
+                        echo 'Selecione um arquivo para ser enviado.<br><br>';
+                        
                     }
 
 // Encerramos a conexão de FTP previamente estabelecida

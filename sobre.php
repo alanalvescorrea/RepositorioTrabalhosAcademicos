@@ -30,7 +30,7 @@ require 'html.class.php';
                     <div class="col-md-12">
                         <!-- Parágrafo -->
                         <div class="main-para">
-                            <p align="justify">O Ptolomeu, é um repositório virtual de trabalhos acadêmicos.</p>
+                            <p align="justify">O Ptolomeu, é uma biblioteca virtual de trabalhos acadêmicos.</p>
                             <br>
                             <p align="justify">O Ptolomeu foi desenvolvido no Curso Técnico para Internet, na disciplina de Projeto 2013/2,
                                 vinculado ao IFRG (Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul).
@@ -38,7 +38,7 @@ require 'html.class.php';
                             <br>
                             <p align="justify">O Sistema visa armazenar, de forma digital, trabalhos autorais 
                                 elaborados por alunos e professores em diversos níveis de ensino.
-                                O sistema possui capacidade de cadastrar, alterar, exlucuir as informações relativas
+                                O sistema possui capacidade de cadastrar, consultar, alterar, exlucuir as informações relativas
                                 aos trabalhos cadastrados, bem como as informações dos usuários do sistema que podem gerencias esses trabalhos e outros usuários.
                                 Os trabalhos são armazenados em formato de arquivo PDF.
                             </p>
